@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        var time = 5;
+        //利用定时器进行倒计时跳转
+        setInterval(function () {
+            if (time == 0) {
+                //location.href 可以修改网页的URL  
+                location.href = "http://baidu.com";  //跳转到百度网页
+            }
+            div.innerHTML = '您还有' + time + '秒会自动跳转';
+            time--;
+        }, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+            块级元素:独占一行并且可以修改宽度和高度
+            行内元素:与其他行内元素相邻占一行,并且不能修改宽和高
+            行内块元素:可以修改高和宽,并且不独占一行
+        */
+        /* 行内元素转换为块级元素 display: block */
+        a {
+            color: purple;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: block;
+        }
+
+        /* 块级元素转换为行内元素 display: inline */
+        div {
+            color: red;
+            background-color: skyblue;
+            /* 这两段无法使用 */
+            /* width: 100px; */
+            /* height: 100px; */
+            display: inline;
+        }
+
+        /* 行内元素转换为行内块元素 display: inline-block */
+        span {
+            width: 100px;
+            height: 100px;
+            color: red;
+            background-color: pink;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <a href="#">行内元素</a>
+    <a href="#">行内元素</a>
+    <div>块级元素转为行内元素</div>
+    <div>块级元素转换为行内元素</div>
+    <span>行内元素转换位行内块元素</span>
+
+</body>
+
+</html>

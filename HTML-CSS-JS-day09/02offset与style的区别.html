@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 200px;
+            background-color: pink;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" style="width: 200px"></div>
+    <script>
+        var box = document.querySelector('.box');
+        //offset系列可以读到padding值
+        console.log(box.offsetWidth);
+        //只能读到行内样式表的内容  style
+        //并且不能读到padding值
+        console.log(box.style.width);
+        //offsetWidth 只可读
+        //style 可读可写
+        box.style.width = '300px';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var div = document.querySelector('div');
+        //简单动画函数封装obj目标对象 target目标位置
+        function animate(obj, target, callback) {
+            clearInterval(obj.timer);
+            //给不同的元素添加定时器
+            obj.timer = setInterval(function () {
+                var step = (target - obj.offsetLeft) / 10
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                if (obj.offsetLeft >= target) {
+                    //停止动画  停止定时器
+                    clearInterval(obj.timer);
+                    //若回调函数不为空  则再动画结束后 执行回调函数
+                    if (callback) {
+                        callback();
+                    }
+                }
+                //把每次步长值修改为一个慢慢变小的值   步长公式:(目标值-现在的位置)/10
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, 30)
+        }
+        //回调函数  
+        animate(div, 300, callback);
+        function callback() {
+            // alert('nihao');
+            div.style.backgroundColor = 'purple';
+        }
+    </script>
+</body>
+
+</html>

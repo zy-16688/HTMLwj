@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        手机号码： <input type="number"> <button>发送</button>
+        <script>
+            var btn = document.querySelector('button');
+            var time = 3;
+            btn.addEventListener('click', function () {
+                //点击按钮后 将按钮设置为禁用
+                btn.disabled = true;
+                //设置定时器
+                var timer = setInterval(function () {
+                    //时间到达了0则
+                    if (time == 0) {
+                        //停止定时器
+                        clearInterval(timer);
+                        //将按钮置为可用
+                        btn.disabled = false;
+                        btn.innerHTML = '发送';
+                        time = 3;
+                    } else {  //时间没有到达0
+                        btn.innerHTML = '还剩' + time + '秒';
+                        time--;
+                    }
+                }, 1000)
+            })
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

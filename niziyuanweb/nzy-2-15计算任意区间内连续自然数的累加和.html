@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border: 1px solid pink;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .box h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>计算任意区间内连续自然数的累加和</h2>
+        <h2>定义区间</h2>
+        起始数:<input type="text" class="tx1">
+        终止数:<input type="text" class="tx2">
+        <br>
+        累加和:<input type="text" class="sum">
+        <br>
+        <button class="btn1">计算</button>
+        <button class="btn2">清空</button>
+    </div>
+    <script>
+        alert('请输入数据');
+        var tx1 = document.querySelector('.tx1');
+        var tx2 = document.querySelector('.tx2');
+        var sum = document.querySelector('.sum');
+        var btn1 = document.querySelector('.btn1');
+        var btn2 = document.querySelector('.btn2');
+        btn1.onclick = function () {
+            var num1 = parseInt(tx1.value);
+            var num2 = parseInt(tx2.value);
+            if (num2 < num1) {
+                alert('终止数比起始数大');
+            }
+            var sum2 = 0;
+            for (var i = num1; i <= num2; i++) {
+                sum2 = sum2 + i;
+            }
+            sum.value = sum2;
+        }
+        btn2.onclick = function () {
+            tx1.value = '';
+            tx2.value = '';
+        }
+    </script>
+</body>
+
+</html>

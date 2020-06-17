@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        $(function () {
+            //获取的是属性的值
+            $("div").css("width");
+
+            //修改样式一  css("属性","值")
+            $("div").css("width", 200);
+
+            //修改样式二 css({})  以对象的形式进行修改
+            $("div").css({
+                width: 200,
+                height: 20,
+                backgroundColor: pink
+            })
+        })
+    </script>
+</body>
+
+</html>

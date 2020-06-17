@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <h3>简易画廊设计</h3>
+        <hr color="#212121">
+        <img class="pic" alt="" src="img/1.jpg" onclick="toggle(this)" tabindex=1 onblur="blur(this)">
+        <img class="pic" alt="" src="img/2.jpg" onclick="toggle(this)" tabindex=1 onblur="blur(this)">
+        <img class="pic" alt="" src="img/3.jpg" onclick="toggle(this)" tabindex=1 onblur="blur(this)">
+        <img class="pic" alt="" src="img/4.jpg" onclick="toggle(this)" tabindex=1 onblur="blur(this)">
+        <img class="pic" alt="" src="img/5.jpg" onclick="toggle(this)" tabindex=1 onblur="blur(this)">
+        <div id="show" style="margin: 0 auto;">
+            <img src="img/1.jpg" id="spic" alt="" style="width: 300px; height: 300px;">
+        </div>
+    </div>
+    <script>
+        function toggle(x) {
+            document.querySelector("#spic").src = x.src;
+            x.style.borderBottom = "5px solid blue";
+        }
+        function blur(x) {
+            x.style.border = "none";
+        }
+    </script>
+</body>
+
+</html>

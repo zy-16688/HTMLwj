@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <p style="display: inline-block" class="pri">12.60</p>
+    <a href="javascript:;" class="decrement">-</a>
+    <input type="text" value="1" class="count">
+    <a href="javascript:;" class="increment">+</a>
+    <p style="display: inline-block" class="pri-count">12.60</p>
+    件数<input type="text" class="all_count"></input>
+    总价<input type="text" class="all_pri"></input>
+    <script>
+        $(function () {
+
+            $(".increment").click(function () {
+                var n = $(this).siblings(".count").val();
+                n++;
+                $(this).siblings(".count").val(n);
+                //计算总价模块
+                var money = $(this).siblings(".pri").text();
+                $(this).siblings(".pri-count").text((n * money).toFixed(2));
+                getSum();
+            })
+            //点击-按钮之后
+            $(".decrement").click(function () {
+                //先获取文本框中的值
+                var n = $(this).siblings(".count").val();
+                //若文本框中的值为0时就不在继续执行下面的代码
+                if (n == 0) {
+                    return false;
+                }
+                //数量减少
+                n--;
+                //将-号的兄弟元素count的值赋为n
+                $(this).siblings(".count").val(n);
+
+                //计算总价模块
+                //先获取-按钮的兄弟元素 单价的价格
+                var count = $(this).siblings(".pri").text();
+                //在修改当前元素的兄弟元素的 总价的价格  toFixed(num) 保留两位小数
+                $(this).siblings(".pri-count").text((count * n).toFixed(2));
+                getSum();
+
+            })
+            $(".count").change(function () {
+                //获取单价的价格
+                var pri = $(this).siblings(".pri").text();
+                //获取文本框中的数量
+                var n = $(this).val();
+                //修改总价的价格
+                $(this).siblings(".pri-count").text((pri * n).toFixed(2));
+            })
+            getSum();
+            function getSum() {
+                var count = 0;
+                var money = 0;
+                $(".count").each(function (index, domEle) {
+                    count += parseInt($(domEle).val());
+                })
+                $(".all_count").val(count);
+
+                $(".pri-count").each(function (index, domEle) {
+                    money += parseFloat($(domEle).text());
+                })
+                $(".all_pri").val(money);
+            }
+        })
+    </script>
+</body>
+
+</html>

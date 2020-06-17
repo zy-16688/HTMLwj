@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <button id="click">改变内容</button>
+    <div id="cont">要修改</div>
+    <script>
+        var click = document.querySelector("#click");
+        click.onclick = function () {
+            var cont = document.querySelector("#cont");
+            var val = cont.innerHTML;
+            cont.innerHTML = ' <input type="text" id="name" value' + val + '/>'
+            document.querySelector("#name").onblur = function () {
+                cont.innerHTML = document.querySelector("#name").value;
+            }
+        } 
+    </script>
+
+    <!-- <button id="click">改变内容</button>
+    <div id="t">要改dao变的内内容</div>
+    <script type="text/javascript">
+        document.getElementById("click").onclick = function () {
+            var text = document.getElementById("t");
+            var val = text.innerHTML;
+            text.innerHTML = "<input type='text' id='n' value=" + val + " />";
+            document.getElementById("n").addEventListener("blur", function (e) {
+                text.innerHTML = document.getElementById("n").value;
+            });
+        };
+    </script> -->
+</body>
+
+</html>

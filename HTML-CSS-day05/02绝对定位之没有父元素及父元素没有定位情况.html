@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fat {
+            width: 500px;
+            height: 400px;
+            background-color: purple;
+        }
+
+        .son {
+            /* 绝对定位
+            position: absolute
+            特点:
+            1.若没有父级元素或者父级元素没有加定位,则以浏览器文档来定位
+             */
+            position: absolute;
+            bottom: 100px;
+            left: 200px;
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fat">
+        <div class="son"></div>
+    </div>
+</body>
+
+</html>

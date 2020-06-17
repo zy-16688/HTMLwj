@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 0px;
+            /* 溢出的部分隐藏 */
+            overflow: hidden;
+            height: 66px;
+            font-size: 20px;
+            /* 取消自动换行 */
+            white-space: nowrap;
+            background-color: pink;
+            /* animation-timming-function: steps(); 设置时间步长  让动画分几步完成*/
+            animation: donghua steps(10) 2s infinite;
+        }
+
+        @keyframes donghua {
+            0% {}
+
+            100% {
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>哈哈哈哈哈哈哈哈哈哈</div>
+</body>
+
+</html>

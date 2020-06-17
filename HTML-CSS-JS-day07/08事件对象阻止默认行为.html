@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>123</div>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+        <input type="submit" value="提交" name="sub" id="load">
+    </form>
+    <script>
+        var div = document.querySelector('div');
+        //e.type返回的是事件的类型
+        div.addEventListener('mouseover', fn);
+        div.addEventListener('mouseout', fn);
+        function fn(e) {
+            console.log(e.type);
+        }
+        //阻止默认事件让链接不跳转或者让提交按钮不提交
+        var a = document.querySelector('a');
+        a.addEventListener('click', function (e) {
+            e.preventDefault();
+        });
+        var load = document.querySelector("#load");
+        // load.addEventListener("click", function (e) {
+        //     e.preventDefault()
+        // })
+        //return false  要在传统的注册事件中使用
+        load.onclick = function () {
+            return false;
+        }
+    </script>
+</body>
+
+</html>

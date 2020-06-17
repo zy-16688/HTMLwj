@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      var students = [
+        { sname: "李四", sage: "188", sex: "男" },
+        { sname: "王五", sage: "166", sex: "女" },
+        { sname: "王六", sage: "188", sex: "男" },
+      ];
+      for (var i = 0; i < students.length; i++) {
+        var stuObj = students[i];
+        alert(stuObj.sname + stuObj.sage + stuObj.sex);
+      }
+      var studentObj = {
+        sno: "110",
+        sname: "张三",
+        sex: "男",
+      };
+      alert(studentObj.sno + "," + studentObj.sname + "," + studentObj.sex);
+    </script>
+  </body>
+</html>

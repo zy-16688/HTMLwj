@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<style>
+		p{width: 100px;
+			height:100px;
+			background-color:#66CCFF;
+			float: left;
+			margin: 10px;
+			text-align: center;
+			
+}
+		div#container{border: 1px solid;
+			width: 340px;
+			height: 100px;
+			clear: both;
+			margin: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>这是个行为</h3>
+	<hr />
+	<p id="t1" draggable="true" ondragstart="drag1(event)">拖拽效果<br>move</p>
+	<p id="t2" draggable="true" ondragstart="drag2(event)">拖拽效果<br>copy</p>
+	<p id="t3" draggable="true" ondragstart="drag3(event)">拖拽效果<br>link</p>
+	<div id="container"ondragover="allowDrop(event)"ondrop="drop(event)">
+	这里是区域</div>
+	<script>
+	function drag1(ev){
+		var dataTrans=ev.dataTransfer;
+		dataTrans.effectAllowed="move";
+		dataTrans.setData("text/plain","testEffect");
+		}
+		function drag2(ev){
+		var dataTrans=ev.dataTransfer;
+		dataTrans.effectAllowed="copy";
+		dataTrans.setData("text/plain","testEffect");
+		}
+		function drag3(ev){
+		var dataTrans=ev.dataTransfer;
+		dataTrans.effectAllowed="link";
+		dataTrans.setData("text/plain","testEffect");
+		}
+		function allowDrop(ev){
+			
+			ev.preventDefault();
+		}
+		function drop(ev){ev.preventDefault();
+}
+	</script>
+</body>
+</html>

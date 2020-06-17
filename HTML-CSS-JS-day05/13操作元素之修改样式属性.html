@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        //获取事件源
+        var div = document.querySelector('div');
+        //注册事件  处理程序
+        div.onclick = function () {
+            //style里面的属性 采取驼峰命名法element.style.样式 
+            //修改后的样式为行内样式
+            div.style.backgroundColor = 'pink';
+            div.style.width = '120px';
+        }
+    </script>
+</body>
+
+</html>

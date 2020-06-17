@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<style>
+		p {
+			width: 100px;
+			height: 100px;
+			background-color: #66CCFF;
+
+		}
+	</style>
+</head>
+
+<body>
+	<h3>移动的图标应用</h3>
+	<hr />
+	<p id="text" draggable="true" ondragstart="drag(event)">
+		移动图标</p>
+	<script>
+		function drag(ev) {
+			var img = new Image();
+			img.src = "angel.gif";
+			ev.dataTransfer.setDragImage(img, 5, 5)
+		}
+	</script>
+</body>
+
+</html>

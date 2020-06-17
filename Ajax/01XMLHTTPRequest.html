@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="发送请求报文">
+    <script>
+        document.querySelector('input').onclick = function () {
+            //创建 异步对象
+            var xhr = new XMLHttpRequest();
+
+            //请求行
+            xhr.open('get', '../轮播图/index.html');
+
+            //请求头
+            xhr.setRequestHeader('hahah', 'hehe');
+
+            //请求主体
+            xhr.send(null);
+        } 
+    </script>
+</body>
+
+</html>

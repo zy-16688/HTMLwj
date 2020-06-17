@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 900px;
+            height: 600px;
+            /* background-color: pink; */
+            border: 6px solid rgba(0, 0, 0, .2);
+            margin: 0px auto;
+        }
+
+        .box-sun {
+            width: 850px;
+            height: 550px;
+            /* background-color: skyblue; */
+            margin: 20px auto;
+            background-color: skyblue;
+
+        }
+
+        .title {
+            padding: 2px;
+            width: 100%;
+            height: 40px;
+            /* background-color: orange; */
+            color: #0000ff;
+            border-bottom: 5px solid #cccccc;
+        }
+
+        .title h2 {
+            float: left;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .title h6 {
+            float: right;
+            height: 20px;
+            padding-right: 100px;
+            line-height: 35px;
+        }
+
+        .body {
+            width: 100%;
+            height: 510px;
+            /* background-color: skyblue; */
+        }
+
+        .body .body-title {
+            width: 700px;
+            margin: 0px auto;
+            color: red;
+        }
+
+        .body .body-content {
+            width: 700px;
+            height: 450px;
+            /* background-color: pink; */
+            border: 5px solid #cccccc;
+            margin: 0px auto;
+            font-size: 13px;
+            line-height: 40px;
+            padding: 2px;
+            padding-left: 30px;
+
+        }
+
+        .body .body-content table {
+            width: 100%;
+            height: 100%;
+        }
+
+        .body-content table tr {
+            width: 100px;
+            height: 100px;
+            border-bottom: 10px solid #cccccc;
+        }
+
+        .body-content h4 {
+            display: inline-block;
+
+        }
+
+        .body-content input {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="box-sun">
+            <div class="title">
+                <h2>留言板</h2>
+                <h6>科技工作者建言</h6>
+            </div>
+            <div class="body">
+                <div class=body-title>发表留言</div>
+                <div class="body-content">
+                    <table>
+                        <tr>
+                            <h4>姓 名:</h4><input type="text" style="margin-left: 60px;">
+                        </tr>
+                        <br>
+                        <tr>
+                            <h4>电子邮箱:</h4><input type="text" style="margin-left: 35px;">
+                        </tr>
+                        <br>
+                        <tr>
+                            <h4 style="margin-right: 57px;">分 类:</h4>科技工作者建言<input type="radio" name="suggest" id="">不保密
+                            <input type="radio" name="suggest" id="">保密 留言类型: <select name="" id=""></select>
+                        </tr>
+                        <br>
+                        <tr>
+                            <h4 style="float: left; line-height: 100px; padding-right: 60px;">留言:</h4> <textarea name=""
+                                id="" cols="40" rows="8"></textarea>
+                        </tr>
+                        <br>
+                        <tr>
+                            <h4 style="font-size: 12px; font-weight: 400;">
+                                注：如果您的留言不便公开，请选择"保密"选项，提交后可凭系统反馈给您的留言编号、查询密码和您的姓名查询回复。</h4>
+                        </tr>
+                        <br>
+                        <tr>
+                            <input type="submit" value="提交" style="margin-left: 250px;"> <input type="reset" value="清空">
+                        </tr>
+                        <br>
+                        <tr>
+                            <ul style="padding-left: 15px;">
+                                <li>
+                                    请遵守国家有关法律、法规，尊重网上道德，承担一切因您的行为而直接或间接引起的法律责任。
+                                </li>
+                                <li>
+                                    本网站拥有管理笔名和留言的一切权利。
+                                </li>
+                            </ul>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

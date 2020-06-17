@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            width: 888px;
+            height: 1666px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        .fixed {
+            position: fixed;
+            /* 版心固定盒子小技巧
+            1.令版心盒子定位为fixed
+            2.并且将left: 50%
+            3.margin-left: 版心盒子宽度的一半
+            */
+            left: 50%;
+            margin-left: 450px;
+            width: 200px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed"></div>
+    <div class="w"></div>
+
+</body>
+
+</html>

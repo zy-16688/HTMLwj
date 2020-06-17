@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    顺顺利利
+    <script>
+        //1.contextmenu 禁用右键菜单
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();  //阻止事件默认行为
+        })
+        //2.禁止选中文字 selectstart
+        document.addEventListener('selectstart', function (e) {
+            e.preventDefault();  //阻止事件默认行为
+        })
+    </script>
+</body>
+
+</html>

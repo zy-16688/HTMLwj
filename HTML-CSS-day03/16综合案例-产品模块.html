@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #f1f3ee;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .box {
+            width: 416px;
+            height: 583px;
+            background-color: white;
+            /* 让块级元素盒子水平居中 */
+            margin: 100px auto;
+        }
+
+        .box img {
+            /* 将图片的宽度改成和div一样宽 */
+            width: 100%;
+        }
+
+
+
+        .box .duanluo {
+            height: 100px;
+            font-size: 14px;
+            /* 不指定宽度或者高度的话,padding不会将将盒子撑大 */
+            padding: 0 80px;
+            margin-top: 47px;
+        }
+
+        .box .pingjia {
+            color: #bbbeb9;
+            padding: 0 80px;
+            font-size: 12px;
+            margin-top: 32px;
+        }
+
+        .info {
+            padding: 0 80px;
+            margin-top: 28px;
+        }
+
+        .box .info h4 {
+            font-weight: 400;
+            display: inline-block;
+
+        }
+
+        .info span {
+            color: orange;
+        }
+
+        .box em {
+            font-style: normal;
+            color: #e1e3df;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <a href="#"><img src="imgs/小米6.jpg" /></a>
+        <a href="#">
+            <p class=" duanluo">快递牛,整体不错蓝牙可以说秒连.红米给力</p>
+        </a>
+        <div class="pingjia">来自于 117384232的评价</div>
+        <div class="info">
+            <h4><a href="#">Redmi AirDots真无线蓝...</a> </h4>
+            <em>|</em>
+            <span>99.9元</span>
+        </div>
+    </div>
+</body>
+
+</html>

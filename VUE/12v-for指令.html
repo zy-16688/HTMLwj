@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input @click="add" value="添加元素" type="button" value="">
+        <input @click="remove" value="移出元素" type="button" value="">
+        <ul>
+            <!-- v-for动态生成列表 in固定 item为变量名可变 -->
+            <li v-for="(item,index) in arr">{{ index+1 }}大城市:{{ item }}</li>
+            <li v-for="(veg,index) in vegetable">蔬菜{{ index+1 }}:{{ veg.name }}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                arr: ["北京", "上海"],
+                vegetable: [
+                    { name: "西红柿" },
+                    { name: "番茄" }
+                ]
+            },
+            methods: {
+                add: function () {
+                    //push方法将元素压入数组
+                    this.vegetable.push({ name: "鸡蛋" })
+                },
+                remove: function () {
+                    //shift方法将元素移出
+                    this.vegetable.shift()
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

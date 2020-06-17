@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth-child(关键字)  关键字:odd奇数  even偶数 */
+        .ul1 li:nth-child(even) {
+            background-color: pink;
+        }
+
+        .ul1 li:nth-child(odd) {
+            background-color: gray;
+        }
+
+        /* nth-child(n) 可以添加表达式 但是指定n是从0开始的 会自动递增 */
+        ol li:nth-child(n) {
+            background-color: pink;
+        }
+
+        /* n指定为2n 选择了所有的偶数孩子等价于even */
+        .ul2 ul li:nth-child(2n) {
+            background-color: purple;
+        }
+
+        /* 2n+1表示了选择奇数的子元素 */
+        .ul2 ul li:nth-child(2n+1) {
+            background-color: orange;
+        }
+
+        /* n+3表示选择了从第三个子元素到最后一个 */
+        .ul2 ul li:nth-child(n+3) {
+            background-color: pink;
+        }
+
+        /* -n+3表示选择了前面3三个子元素 */
+        .ul2 ul li:nth-child(-n+3) {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ul1">
+        <ul>
+            <li>我是第1个孩子</li>
+            <li>我是第2个孩子</li>
+            <li>我是第3个孩子</li>
+            <li>我是第4个孩子</li>
+            <li>我是第5个孩子</li>
+            <li>我是第6个孩子</li>
+            <li>我是第7个孩子</li>
+            <li>我是第8个孩子</li>
+        </ul>
+    </div>
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+    <div class="ul2">
+        <ul>
+            <li>我是第1个孩子</li>
+            <li>我是第2个孩子</li>
+            <li>我是第3个孩子</li>
+            <li>我是第4个孩子</li>
+            <li>我是第5个孩子</li>
+            <li>我是第6个孩子</li>
+            <li>我是第7个孩子</li>
+            <li>我是第8个孩子</li>
+        </ul>
+    </div>
+</body>
+
+</html>

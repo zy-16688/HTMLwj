@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 200px;
+            height: 100px;
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        thead tr {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td><input type="checkbox" id="checkfd"></td>
+                <td>商品</td>
+                <td>价钱</td>
+            </tr>
+        </thead>
+        <tbody id="t-body">
+            <tr>
+                <td><input type="checkbox" id="checksun"></td>
+                <td>苹果1</td>
+                <td>1666</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="checksun"></td>
+                <td>苹果2</td>
+                <td>1888</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var checkfd = document.getElementById('checkfd');
+        var checksun = document.getElementById('t-body').getElementsByTagName('input');
+        checkfd.onclick = function () {
+            for (var i = 0; i < checksun.length; i++) {
+                //将每一个子复选框的选中状态修改为父复选框的选中状态  element.checked 会返回true或者false
+                checksun[i].checked = this.checked;  //this是指调用了onclick的元素
+            }
+        }
+        //遍历集合中的每个复选框并且给每个checksun注册事件 便于检查每个复选框的状态
+        for (var i = 0; i < checksun.length; i++) {
+            checksun[i].onclick = function () {
+                //用于判断全选按钮是否全部选中
+                var flag = true;
+                //每点击一次按钮就检查其余的复选框是否选中
+                for (var i = 0; i < checksun.length; i++) {
+                    //若未选中
+                    if (!checksun[i].checked) {
+                        //标记修改为false
+                        flag = false;
+                        break;
+                    }
+                }
+                //将检查的最终结果赋值给全选框
+                checkfd.checked = flag;
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

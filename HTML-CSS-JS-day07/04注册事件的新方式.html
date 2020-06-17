@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <script>
+        var btns = document.querySelectorAll('button');
+        //方式一   只能绑定一个事件
+        btns[0].onclick = function () {
+            alert('hi');
+        }
+        //方式二   addEventListner(type,listener)  同一个事件可以添加多个侦听器
+        btns[1].addEventListener('click', function () {
+            alert('hi1');
+        })
+        btns[1].addEventListener('click', function () {
+            alert('hi1');
+        })
+    </script>
+</body>
+
+</html>

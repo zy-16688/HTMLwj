@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /* 添加过渡 */
+            transition: all 0.5s;
+        }
+
+        .current {
+            background-color: red;
+            /* 旋转360度 */
+            transform: rotate(360deg);
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            //addClass("类名") 给元素添加指定类名 来添加样式
+            $("div").click(function () {
+                $(this).addClass("current");
+            })
+            //removeClass("类名")  移除元素指定的类名
+            $("div").click(function () {
+                $(this).removeClass("current");
+            })
+            //toggleClass("类名")  切换类名
+            $("div").click(function () {
+                $(this).toggleClass("current");
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

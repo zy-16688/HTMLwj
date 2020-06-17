@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <ul id="nav">
+        <li>首页</li>
+        <li>产品</li>
+    </ul>
+    <script>
+        //通过类名来获取对象集合
+        var boxs = document.getElementsByClassName('box1');
+        console.log(boxs);
+        //通过指定的选择器返回第一个元素对象 querySelector('选择器');  
+        //通过类选择器
+        var firstBox = document.querySelector('.box1');
+        //通过id选择器
+        var nav = document.querySelector('#nav');
+        console.log(nav);
+        //通过标签选择器
+        var li = document.querySelector('li');
+        console.log(li);
+
+        //通过指定的选择器获取全部元素对象 querySelectorAll('选择器')
+        var allLi = document.querySelectorAll('li');
+        console.log(allLi);
+        // var allBox = document.querySelector('.box');
+        // console.log(box);
+
+    </script>
+</body>
+
+</html>

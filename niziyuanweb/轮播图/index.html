@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书销售平台-Bookspf</title>
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="box" class="type_page">
+        <div id="top">
+            <div id="logo"></div>
+            <a href="" id="index">首页</a>
+            <a href="" id="classif">分类</a>
+            <a href="/login" id="log" th:if="${session.userToken == null}">登录</a>
+            <a href="/register" id="reg" th:if="${session.userToken == null}">注册</a>
+            <a href="" th:if="${session.userToken != null}" th:text="${session.username}"></a>
+            <a href="" id="userinfo" th:if="${session.userToken != null}">用户信息</a>
+            <a href="" id="my_order" th:if="${session.userToken != null}">我的订单</a>
+            <a href="" id="exit" th:if="${session.userToken != null}">退出</a>
+        </div>
+        <div id="rotation">
+            <ul class="cont">
+                <li class="item active"><img src="1.jpg" alt=""></li>
+                <li class="item"><img src="2.jpg" alt=""></li>
+                <li class="item"><img src="3.jpg" alt=""></li>
+                <li class="item"><img src="4.jpg" alt=""></li>
+                <li class="item"><img src="5.jpg" alt=""></li>
+                <li class="item"><img src="1.jpg" alt=""></li>
+                <li class="item"><img src="2.jpg" alt=""></li>
+            </ul>
+            <div id="left"><img src="prev.png" alt=""></div>
+            <div id="right"><img src="next.png" alt=""></div>
+            <ul class="dot">
+                <li class="point active" data-index="0"></li>
+                <li class="point" data-index="1"></li>
+                <li class="point" data-index="2"></li>
+                <li class="point" data-index="3"></li>
+                <li class="point" data-index="4"></li>
+                <li class="point" data-index="5"></li>
+                <li class="point" data-index="6"></li>
+                <li class="point" data-index="7"></li>
+            </ul>
+        </div>
+        <div id="publish">
+            <div id="publish_title">
+                <h1>出版图书</h1>
+            </div>
+            <div id="publish_body">
+                <div id="recommend_list">
+                    <div id="list_left">
+                        <div id="left_title">
+                            <h4>橙红年代</h4>
+                            <h6>作者: AABB</h6>
+                        </div>
+                        <div id="left_body">
+                            <img src="1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div id="list_right">
+                        <ul>
+                            <li>
+                                <div id="right_body">
+                                    <img src="1.jpg" alt="">
+                                </div>
+                                <div id="right_title">
+                                    <h4>橙红年代</h4>
+                                    <h6>作者: AABB</h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="right_body">
+                                    <img src="1.jpg" alt="">
+                                </div>
+                                <div id="right_title">
+                                    <h4>橙红年代</h4>
+                                    <h6>作者: AABB</h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="right_body">
+                                    <img src="1.jpg" alt="">
+                                </div>
+                                <div id="right_title">
+                                    <h4>橙红年代</h4>
+                                    <h6>作者: AABB</h6>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="right_body">
+                                    <img src="1.jpg" alt="">
+                                </div>
+                                <div id="right_title">
+                                    <h4>橙红年代</h4>
+                                    <h6>作者: AABB</h6>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="ranking_list">
+                    <ul>
+                        <li>西游记</li>
+                        <li>红楼梦</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

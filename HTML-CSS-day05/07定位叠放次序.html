@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+        }
+
+        .xiongda {
+            /* 定位叠放次序
+            z-index: 数值; 数值越大越靠前
+            */
+            z-index: 2;
+            background-color: green;
+        }
+
+        .xionger {
+            background-color: pink;
+        }
+
+        .xiongsan {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w xiongda"></div>
+    <div class="w xionger"></div>
+    <div class="w xiongsan"></div>
+</body>
+
+</html>

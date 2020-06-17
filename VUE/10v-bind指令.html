@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        .active {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <!-- v-bind:属性可以设置属性的值 -->
+        <img v-bind:src="imgSrc" alt="">
+        <!-- v-bind的简写方式 :属性 -->
+        <img :src="imgSrc" alt="">
+        <!-- class的属性建议使用对象的方式使用 -->
+        <img :src="imgSrc" :class={active:isActive} @click="toggleActive" alt="">
+        <img :src="imgSrc" :class={active:isActive} :title="isTitle" @click="toggleActive" alt="">
+
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imgSrc: "http://www.itheima.com/images/logo.png",
+                isActive: false,
+                isTitle: "黑马"
+            },
+            methods: {
+                toggleActive: function () {
+                    this.isActive = !this.isActive
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

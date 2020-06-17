@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪类选择器模仿一个标签的作用  权重跟标签选择器一样都为1
+        语法: element::before{} element为你要给给指定的元素前面或者后面添加元素
+        */
+        div::before {
+            /* 伪类选择器默认为行内元素 */
+            display: inline-block;
+            /* 伪类选择器before和after中必须写content属性 */
+            content: '我';
+            width: 100px;
+            height: 50px;
+        }
+
+        div::after {
+            content: '熊大';
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        是
+    </div>
+</body>
+
+</html>

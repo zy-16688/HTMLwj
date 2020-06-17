@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 父元素和子元素都有外边距时,会向着外边距较大的元素塌下  */
+        .one {
+            width: 888px;
+            height: 666px;
+            background-color: pink;
+            margin-top: 100px;
+            /* 以下三种方法都可以解决嵌套元素塌下问题
+            第一:在父元素中添加边框
+            第二:在父元素中添加内边距
+            第三:在父元素中添加overflow: hidden
+             */
+            border: 5px solid transparent;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .two {
+            margin-top: 200px;
+            width: 333px;
+            height: 150px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one">
+        <div class="two"></div>
+    </div>
+</body>
+
+</html>

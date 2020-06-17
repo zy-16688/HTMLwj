@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        td,
+        th {
+            /* 给每个单元格添加边框 */
+            border: 1px solid #333;
+        }
+
+        thead tr {
+            height: 40px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>科目</th>
+                <th>成绩</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script>
+        var datas = [
+            {
+                name: '哈',
+                kemu: '数学',
+                score: 100
+            },
+            {
+                name: '哈哈',
+                kemu: '数学',
+                score: 100
+            },
+            {
+                name: '哈哈哈',
+                kemu: '数学',
+                score: 100
+            }
+        ];
+        var tbody = document.querySelector('tbody');
+        for (var i = 0; i < datas.length; i++) {
+            //控制表格行数 
+            var tr = document.createElement('tr');
+            //向表格添加行 
+            tbody.appendChild(tr);
+            for (var k in datas[i]) { //控制表格单元格 列数 
+                //创建单元格 
+                var td = document.createElement('td');
+                //将对象的属性值赋值给单元格
+                td.innerHTML = datas[i][k];
+                //向行中添加单元格
+                tr.appendChild(td);
+            }
+            //单独创建带删除的单元格
+            var td = document.createElement('td');
+            td.innerHTML = "<a href='javascript: ; '>删除</a>";
+            tr.appendChild(td);
+        }
+        //获取所有的a节点
+        var as = document.querySelectorAll('a');
+        for (var i = 0; i < as.length; i++) {
+            //给每个链接a绑定事件
+            as[i].onclick = function () {
+                //要移除行 行的父节点是tbody  参数是行 那么就是this.父节点.父节点
+                tbody.removeChild(this.parentNode.parentNode);
+            }
+        }
+        /*   for(变量 in 对象){
+                          变量名 获取的是属性名
+                          对象[变量名]  获取的是属性值
+                      } */
+    </script>
+</body>
+
+</html>

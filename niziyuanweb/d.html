@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>文件拖放</title>
+    <style type="text/css">
+        #fileCheck {
+            width: 18.75rem;
+            height: 6.25rem;
+            border: 0.0625rem dashed;
+            margin: 1.25rem;
+        }
+
+        li {
+            margin: 0.625rem;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>文本拖放</h3>
+    <hr />
+    <div id="fileCheck" ondragover="allowDrop(event)" ondrop="drop(event)">请将文本拖放到此处</div>
+    <div id="status"></div>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            var files = ev.dataTransfer.files;
+            var fileStatus;
+            var f;
+            for (var i = 0; i < files.length; i++) {
+                f = file[i];
+                var lastModified = f.lastModifiedDate;
+                var lastModifiedStr = lastModified.toLocaleString();
+                fileStatus += '<li>名称：' + f.name + '<br>类型：' + f.type + '<br>大小：' + f.size + '字节<br>修改时间：' + lastModifiedStr + '</li>';
+            }
+            var status = document.getElementById("status")
+            status.innerHTML = '<ul>' + fileStatus + '</ul>';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

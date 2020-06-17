@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 自定义属性命名规则为 data-属性名="属性值" -->
+    <div data-index="5" data-list-name="andy"></div>
+    <script>
+        var div = document.querySelector('div');
+        //获取自定义属性值
+        //方式一
+        div.getAttribute('data-index');
+        //方式二 element.dataset.属性名 
+        //dataset中存放了自定义属性
+        div.dataset.index;
+        //获取有多个-的属性  要是用驼峰命名规则
+        div.dataset.listName; 
+    </script>
+</body>
+
+</html>

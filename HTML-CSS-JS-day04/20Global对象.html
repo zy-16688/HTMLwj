@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var url = "http://baidu.com?wd=传智播客";
+        //编码  encodeURI()  encodeURIComponent()
+        //解码  decodeURI()  encodeURIComponent()
+        var encode = encodeURI(url);
+        document.write(encode + "<br>");
+        var s = decodeURI(encode);
+        document.write(encode);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

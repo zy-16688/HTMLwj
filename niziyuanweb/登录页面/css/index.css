@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: black
+}
+input {
+    height: 35px;
+    width: 200px;
+}
+.register {
+    width: 500px;
+    height: 500px;
+    /* background-color: pink; */
+    margin: 40px;
+    border: 1px solid #ccc;
+}
+
+.reghead {
+    width: 90px;
+    height: 50px;
+    margin: 30px auto;
+}
+
+#accreg {
+    width: 100px;
+    height: 35px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid red;
+}
+#sb {
+    cursor: pointer;
+}
+.regbody {
+    position: relative;
+    line-height: 60px;
+    padding: 10px 150px;
+}
+#username::before {
+    background: url(../img/wrong.png);
+}
+.forgetpd {
+    float: right;
+}
+
+.syp {
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    top: 10px;
+    right:160px;
+    cursor: pointer;
+}
+.accinfo {
+    width: 100px;
+    height: 80px;
+}

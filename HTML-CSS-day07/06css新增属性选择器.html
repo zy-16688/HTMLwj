@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器
+        必须是input表单,但是同时也要具有value属性
+        */
+        input[value] {
+            color: pink;
+        }
+
+        /* 属性选择器还可以选择某些
+        属性="属性值" 的元素
+        */
+        input[type="text"] {
+            color: pink;
+        }
+
+        div[class^="icon"] {
+            color: pink;
+        }
+
+        div[class$="date"] {
+            color: purple;
+        }
+
+        /* 注意:属性选择器 类选择器 伪类选择器 权重都为10
+        属性选择器 []才是属性选择器本体
+        而前面的标签是标签选择器
+        */
+    </style>
+</head>
+
+<body>
+    <!-- 1.利用属性选择器就可以不用借助于类或者id选择器 -->
+    <input type="search" value="hahahaha">
+    <input type="serach" name="" id="">
+    <!-- 2.属性选择器还可以选择属性=值的某些元素 -->
+    <input type="text">
+    <input type="password">
+    <!-- 3.属性选择器可以选择属性值开头的某些元素 -->
+    <div class="icon1">小图标1</div>
+    <div class="icon2">小图标2</div>
+    <div class="icon3">小图标3</div>
+    <div class="icon4">小图标4</div>
+    <!-- 4.属性选择器可以选择属性值结尾的某些元素 -->
+    <div class="icon1-date">小图标1</div>
+    <div class="icon2-date">小图标1</div>
+    <div class="icon3-date">小图标1</div>
+    <div class="icon">小图标1</div>
+</body>
+
+</html>

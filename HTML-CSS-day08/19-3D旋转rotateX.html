@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 400px;
+        }
+
+        img {
+            display: block;
+            width: 200px;
+            transition: all 0.5s;
+            margin: 100px auto;
+        }
+
+        img:hover {
+            /* 朝外转是正值 朝内转为负值
+            左手法则 大拇指朝向X轴的正方向 手指弯曲方向为正值
+             */
+            transform: rotateX(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="imges/pig.jpg" alt="">
+</body>
+
+</html>

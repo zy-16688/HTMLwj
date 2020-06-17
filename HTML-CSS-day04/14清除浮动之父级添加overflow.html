@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao {
+            width: 600px;
+            /*可以通过给父级元素添加overflow属性并设置其属性值为:hidden scroll auto*/
+            overflow: hidden;
+            margin: 0 auto;
+            border: 1px solid blue;
+        }
+
+        .ermao {
+            height: 450px;
+            background-color: pink;
+        }
+
+        .damao1 {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+
+        }
+
+        .damao2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="damao">
+        <div class="damao1"></div>
+        <div class="damao2"></div>
+        <div class="damao2"></div>
+        <div class="damao2"></div>
+    </div>
+    <div class="ermao"></div>
+</body>
+
+</html>

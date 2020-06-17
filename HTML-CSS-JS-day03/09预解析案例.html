@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = b = c = 9; //等价于var a=9;b=9;c=9;  只声明了a
+
+        var num = 10;
+        fun();
+        function fun() {
+            console.log(num);
+            var num = 20;
+        }
+        //以上代码相当于
+        var num;
+        function fun() {
+            var num;
+            console.log(num);  //输出结果为undefined
+            num = 20;
+        }
+        num = 10;
+        fun();
+
+
+
+        function f1() {
+            var a;
+            a = b = c = 9;
+            //相当于var a=9;b=9;c=9; 只声明了a变量
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        f1();
+        console.log(c); //b和c没有声明都为全局变量
+        console.log(b);
+        console.log(a); //a声明了所以为局部变量
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

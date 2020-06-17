@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" @click="setM">
+        <!-- v-model指令 动态修改页面的数据 -->
+        <input type="text" v-model="message" @keyup.enter="getM">
+        <h4>{{ message }}</h4>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "哈哈哈"
+            },
+            methods: {
+                getM: function () {
+                    alert(this.message);
+                },
+                setM: function () {
+                    this.message = "qiaqia"
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

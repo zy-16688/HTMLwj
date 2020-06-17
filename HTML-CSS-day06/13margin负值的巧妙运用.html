@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        ul li {
+            float: left;
+            width: 100px;
+            height: 200px;
+            /* 可以解决边框的合并的问题 */
+            margin-left: -1px;
+            border: 1px solid pink;
+        }
+
+        ul li:hover {
+            /* 如果盒子没有定位,则鼠标经过添加相对定位即可 */
+            position: relative;
+            /* 如果li有定位,则利用z-index提高层级 */
+            z-index: 1;
+            border: 1px solid orange;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

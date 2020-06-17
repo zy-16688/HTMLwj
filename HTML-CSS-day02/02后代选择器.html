@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复合选择器之后代选择器</title>
+    <style>
+        /* 
+        后代选择器格式:
+            元素1 元素2 {
+                样式
+           } 
+        */
+        ol li {
+            color: pink;
+        }
+
+        ul li a {
+            text-decoration: none;
+        }
+
+        .nav li a {
+            color: pink;
+        }
+
+        .nav1 ul li a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li>这是无需列表</li>
+        <li>这是无序列表</li>
+        <li>这是无序列表</li>
+    </ol>
+    <ul>
+        <li>这是有序列表</li>
+        <li>这是有序列表</li>
+        <li><a href="#">这是有序列表</a></li>
+    </ul>
+    <ul class="nav">
+        <li>这是有序列表</li>
+        <li>这是有序列表</li>
+        <li><a href="#">这是有序列表</a></li>
+    </ul>
+
+    <!-- 练习 -->
+    <div class="nav1">
+        <ul>
+            <li><a href="#">百度</a></li>
+            <li><a href="#">百度</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

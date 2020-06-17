@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+
+
+</head>
+
+<body>
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <p>我是p</p>
+    <script>
+        $(function () {
+            $("div").on("click mouseover", function () {
+                alert(11);
+            })
+            $("ul").on("click", "li", function () {
+                alert(11);
+            })
+            //off() 解绑了所有的时间
+            $("div").off();
+            //off(事件)  解绑了click事件
+            $("div").off("click");
+            //off(事件,元素)  解绑了有委托的事件
+            $("ul").off("click", "li");
+            //one()只触发一次事件
+            $("p").one("click", function () {
+                alert(11);
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

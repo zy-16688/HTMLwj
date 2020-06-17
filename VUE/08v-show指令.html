@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="changeIsShow">切换图片状态</button>
+        <button @click="addAge">增加年龄</button>
+        <!-- v-show指令为true时图片会显示 -->
+        <img v-show="age>=18" src="img/monkey.gif" alt="">
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                age: 17
+            },
+            methods: {
+                changeIsShow: function () {
+                    this.isShow = !this.isShow
+                },
+                addAge: function () {
+                    this.age++
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 过渡效果: (谁做过渡就给谁加)
+            transition: 过渡的属性 花费的时间 运动的曲线 何时开始
+             */
+            transition: width 0.5s;
+            height: 100px;
+            width: 200px;
+            background-color: pink;
+            /* 多属性过渡的话可以用逗号隔开 */
+            transition: width 0.5s, height 0.5s, background-color 0.5s;
+            /* 多属性过渡也可以用all代替 */
+            transition: all 0.5s;
+
+        }
+
+        .box:hover {
+            width: 400px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 160px;
+            height: 160px;
+            overflow: hidden;
+            border: 1px solid #ffc0cb;
+            margin: 100px auto;
+
+        }
+
+        div::after {
+            transition: all 0.5s;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            transform-origin: left bottom;
+            transform: rotate(180deg);
+        }
+
+        div:hover::after {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+/* 列表页专有的css */
+.sk {
+    position: absolute;
+    left: 186px;
+    top: 42px;
+    padding: 7px 0 0 16px;
+    border-left: 1px solid red; 
+}
+
+.sk_list {
+    float: left;
+}
+.sk_list ul li {
+    float: left;
+}
+.sk_list ul li a{
+    display: block;
+    padding:  0 30px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 42px; 
+}
+
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a{
+    display: block;
+    padding:  0 30px;
+    font-size: 12px;
+
+    line-height: 44px; 
+}
+.sk_con ul li:last-child a::after {
+    content: "\e7b2";
+}
+.sk_bd  {
+    margin-top: 10px;
+}
+.sk_bd ul li {
+    overflow: hidden;
+    float: left;
+    width: 290px;
+    height: 460px;
+    margin-right: 12px;
+    border: 1px solid transparent;
+}
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd ul li:hover {
+    border: 1px solid red;
+}

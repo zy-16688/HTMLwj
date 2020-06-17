@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* translate是对行内元素无效的 */
+            position: relative;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+
+        p {
+            /* 还是通过定位来让盒子本身居中 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 让盒子本身往回走自身的高度和宽度的一半  */
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

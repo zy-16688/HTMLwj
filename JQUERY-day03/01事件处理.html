@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .current {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <ol>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+        <li>1</li>
+    </ol>
+    <script>
+        //1.事件处理on  element.on({事件:function(){}})
+        $(".one").on({
+            mouseenter: function () {
+                $(this).css("backgroundColor", "purple");
+            },
+            click: function () {
+                $(this).css("background", "orange");
+            }
+        })
+        $(".two").on("mouseenter mouseleave", function () {
+            $(this).toggleClass("current");
+        });
+
+        //2.on可以实现事件委托  给ul绑定点击事件 但是点击li也是有反应的
+        $("ul").on("click", "li", function () {
+            alert(66);
+        })
+
+        //3.on可以给未来动态创建的元素绑定事件
+        $("ol").on("click", "li", function () {
+            alert(88);
+        })
+        //创建元素
+        var li = $("<li>2</li>");
+        $("ol").append(li);
+    </script>
+</body>
+
+</html>

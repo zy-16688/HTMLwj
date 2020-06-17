@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        各个选择的优先权:继承权重为0 元素选择器权重为1 类选择器/伪类选择器权重为10 id选择器权重为100 行内样式style !important
+        注意:继承的权重为0,不管父标签的权重多高,子元素得到的权重都是0
+        */
+        div {
+            color: yellow !important;
+        }
+
+        .test {
+            color: pink;
+        }
+
+        #demo {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="test" id="demo" style="color: purple">这是测试</div>
+</body>
+
+</html>

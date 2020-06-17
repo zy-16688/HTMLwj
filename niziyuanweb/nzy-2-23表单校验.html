@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="http://baidu.com">
+        <input type="text" id="username">
+        <input type="password" name="" id="password">
+        <input type="submit" class="login" value="提交">
+
+    </form>
+    <script>
+        var login = document.querySelector(".login");
+        var username = document.querySelector("#username");
+        var pwd = document.querySelector("#password");
+        var regex = /^[0-9a-zA-Z_]*$/;
+        login.addEventListener("click", function (e) {
+            if (username.value === "") {
+                alert("请输入用户名");
+                e.preventDefault();
+            }
+            if (pwd.value === "") {
+                alert("请输入密码");
+                e.preventDefault();
+            }
+            if (pwd.value.length <= 4 || pwd.value.length >= 6) {
+                alert("请输入正确的用户名");
+                e.preventDefault();
+            }
+            if (!regex.test(username.value)) {
+                aler("请输入正确的密码");
+                e.preventDefault();
+            }
+        })
+
+
+
+    </script>
+</body>
+
+</html>

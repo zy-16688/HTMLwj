@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            float: left;
+            width: 66px;
+            height: 66px;
+            margin: 10px;
+            border: 2px solid pink;
+            transition: all 0.5;
+            border-radius: 33px;
+            text-align: center;
+            line-height: 66px;
+            /* 取消li前的小点 */
+            list-style: none;
+            /* 指定鼠标为小手样式 */
+            cursor: pointer;
+        }
+
+        li:hover {
+            /* 缩放效果 */
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+    </ul>
+</body>
+
+</html>

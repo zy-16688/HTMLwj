@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="http://baidu.com" title="挺好"></a>
+    <input type="checkbox" name="" id="" checked>
+    <div index="1" data-index="6"></div>
+    <script>
+        $(function () {
+            //1.element.prop("属性名")  获取固有属性值
+            console.log($("a").prop("href"));
+            //element.prop("属性名","属性值") 修改固有属性的值和名
+            $("a").prop("title", "非常好");
+            //获取input表单中的checked属性值
+            $("input").change(function () {
+                console.log($(this).prop("checked"));
+            })
+
+            //2.element.attr("属性名") 获取自定义属性值
+            console.log($("div").attr("index"));
+            //element.attr("属性名","属性值") 设置自定义属性值
+            $("div").attr("index", "6");
+            console.log($("div").attr("data-index"));
+
+            //3.data() 数据缓存 
+            console.log($("div").data("index"));  //获取的是data-index自定义属性的值 返回的是数值型
+        })
+    </script>
+</body>
+
+</html>

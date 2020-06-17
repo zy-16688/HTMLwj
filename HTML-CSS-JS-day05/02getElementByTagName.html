@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <ul id="nav">
+        <li>哈哈</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+    </ul>
+    <script>
+        //document.getElementsByTagName('标签名')  通过标签名来获取元素 返回的是一个对象集合
+        //获取过来的元素对象的集合是以伪数组的形式存储的
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        for (var i = 0; i < lis.length; i++) {
+            console.log(lis[i]);
+        }
+        //element.getElementsByTagName('标签名');  可以获取指定元素中的某些标签
+        var nav = document.getElementById('nav');
+        var lis = nav.getElementsByTagName('li');
+        console.log(lis);
+    </script>
+</body>
+
+</html>

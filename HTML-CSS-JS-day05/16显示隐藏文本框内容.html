@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" value="手机">
+    <script>
+        var text = document.querySelector('input');
+        //当文本框获取焦点后
+        text.onfocus = function () {
+            //若文本框值为手机
+            if (this.value === '手机') {
+                this.value = '';
+            }
+            text.style.color = 'black';
+        }
+        //当文本框失去焦点后
+        text.onblur = function () {
+            //若文本框中值为空
+            if (this.value == '') {
+                this.value = '手机';
+            }
+            //失去焦点后文本框颜色变浅
+            text.style.color = '#ccc';
+        }
+    </script>
+</body>
+
+</html>

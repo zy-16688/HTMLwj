@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            height: 0;
+            width: 0;
+            /* 生成一个直角三角形 
+             1.只保留右边的边框颜色
+            */
+            border-color: transparent red transparent transparent;
+            /* 样式都只用solid */
+            border-style: solid;
+            /* 上边框宽度要大,右边框 宽度稍小 其余都为0 */
+            border-width: 20px 8px 0px 0px;
+        }
+
+        .box2 {
+            width: 0;
+            height: 0;
+            border-top: 200px solid transparent;
+            border-left: 80px solid blue;
+            border-bottom: 0px solid green;
+            border-right: 0px solid pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

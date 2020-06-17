@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #test {
+            border: 1px dashed;
+            width: 400px;
+            margin: 10px;
+        }
+
+        button {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>停止实时更新位置信息</h3>
+    <hr>
+    <button onclick="start()">
+        开始获取位置
+    </button>
+    <button onclick="stop()">
+        停止获取位置
+    </button>
+    <button id="test">
+        坐标获取到会显示在这里
+        <br>
+    </button>
+    <script>
+        var x = document.getElementById("test");
+        var watchID;
+
+        if (!navigator.geolocation) {
+            x.innerHTML = "对不起,你的浏览器不支持HTML5地理定位API"
+        };
+
+        function start() {
+            watchID = navigator.geolocation.watchPosition(showPosition, showErro, options);
+        }
+
+        //停止
+        function stop() {
+            navigator.geolocation.clearWatch(watchID);
+            x.innerHTML += "实时更新位置已停止 <br><br>"
+        }
+
+        function showPosition(position) {
+            var now = new Date();
+            x.innerHTML += "本次更新时间" + now.toLocaleString() + "<br>您的纬度是:" + position.coords.latitude + "<br>您的维度是" + position.coords.longitude + "<br><br>"
+        }
+
+        function showErro(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "用户拒绝了地理定位的请求";
+                    break;
+                case error.PERMISSION_UNAVAILABLE:
+                    x.innerHTML = "位置信息不可用"
+                    break;
+                case error.PERMISSION_ERROR:
+                    x.innerHTML = "未知错误发送"
+                    break;
+            }
+        }
+
+        var options = {
+            enableHighAccuracy: true,
+            maximumAge: 2000,
+            timeout: 2000
+        }
+    </script>
+</body>
+
+</html>

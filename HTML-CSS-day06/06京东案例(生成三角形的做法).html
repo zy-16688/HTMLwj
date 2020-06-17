@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .box .triangle {
+            position: absolute;
+            /* 让三角形垂直居中 */
+            top: 50%;
+            margin-top: -5px;
+            /* 让三角形水平刚好出盒子 */
+            right: -10px;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-left-color: blue;
+        }
+
+        .box1 {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: pink;
+        }
+
+        .box1 .triangle {
+            position: relative;
+            left: 180px;
+            /* 边框一边为5px 最终盒子的高度则为10px */
+            top: -10px;
+            width: 0;
+            height: 0;
+            border: 5px solid transparent;
+            border-bottom-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="triangle"></div>
+    </div>
+    <div class="box1">
+        <div class="triangle"></div>
+    </div>
+</body>
+
+</html>

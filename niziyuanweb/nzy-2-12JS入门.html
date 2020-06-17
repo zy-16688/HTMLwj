@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal() {
+            var num = document.getElementById("num").value
+            var sum = 0;
+            if (isNaN(num)) {
+                alert("非数字");
+            } else {
+                for (var i = 1; i <= num; i++) {
+                    sum = sum + i;
+                }
+            }
+            document.writeln(num);
+
+        }
+
+    </script>
+</head>
+
+<body>
+    请输入一个数<input type="text" id="num">
+    <input type="button" value="提交" onclick="cal();">
+</body>
+
+</html>

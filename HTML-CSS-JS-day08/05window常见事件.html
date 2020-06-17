@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //load等页面内容全部加载完毕
+        //DOMContentLoaded 是DOM加载完毕  不包含图片等 就可以执行
+        window.addEventListener('load', function () {
+            alert('22');
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            alert('33');
+        })
+    </script>
+
+</head>
+
+<body>
+    <button>按钮</button>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            margin: 200px;
+        }
+
+        span {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            font-size: 20px;
+            color: #fff;
+            text-align: center;
+            line-height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <script>
+        var hour = document.querySelector('.hour');
+        var min = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        //获得用户输入的时间戳
+        var inputttime = +new Date('2020-4-13 18:00:00');
+        //先调用一次函数才不会出现空白的现象
+        cuttime();
+        //每隔一秒钟就调用一次cuttime函数
+        setInterval(cuttime, 1000);
+        function cuttime() {
+            //获得当前时间的时间戳
+            var nowtime = +new Date();
+            //换算成秒数
+            var timer = (inputttime - nowtime) / 1000;
+            //计算小时数 若小于10则再前面补0
+            var h = parseInt(timer / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            //hour盒子的内容修改为h
+            hour.innerHTML = h;
+            var m = parseInt(timer / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            min.innerHTML = m;
+            var s = parseInt(timer % 60);
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+
+        }
+    </script>
+</body>
+
+</html

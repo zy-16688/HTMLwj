@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <span id="time">5</span>秒之后跳转
+    </p>
+    <script>
+        var time = document.querySelector("#time");
+        var times = 5;
+        function cuttime() {
+            times--;
+            time.innerHTML = times;
+            if (times <= 0) {
+                location.href = "http://baidu.com";
+            }
+        }
+        setInterval(cuttime, 1000);
+    </script>
+</body>
+
+</html>

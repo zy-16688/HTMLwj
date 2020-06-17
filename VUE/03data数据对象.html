@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        //使用vue中定义的数据
+        {{message}}
+        <h3>{{school.name}}</h3>
+        <ul>
+            <li>{{campus[0]}}</li>
+        </ul>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            //定义要使用的数据
+            data: {
+                message: "哈哈哈",
+                school: {
+                    name: "东莞理工学院",
+                    mobile: 166688
+                },
+                campus: ["北京", "上海"]
+            }
+        })
+    </script>
+</body>
+
+</html>

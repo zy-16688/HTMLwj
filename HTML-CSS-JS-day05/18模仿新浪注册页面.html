@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            margin: 100px auto;
+        }
+
+        .message {
+            display: none;
+            padding-left: 20px;
+            background: url(imges/message.png) no-repeat left center;
+            font-size: 14px;
+        }
+
+        .wrong {
+            color: red;
+            background: url(imges/wrong.png) no-repeat left center;
+
+        }
+
+        .right {
+            color: green;
+            background: url(imges/right.png) no-repeat left center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" class="tx1">
+        <p class="message">请输入信息</p>
+
+    </div>
+    <script>
+        var tx1 = document.querySelector('.tx1');
+        var message = document.querySelector('.message');
+        //文本框失去焦点时
+        tx1.onblur = function () {
+            //若文本框中的内容长度小于6或者大于16
+            if (tx1.value.length < 6 || tx1.value.length > 16) {
+                message.className = 'message wrong';
+                message.innerHTML = '请输入6至16位数';
+            } else {
+                //利用类名样式操作 element.className='类名'; 引入样式
+                message.className = 'message right';
+                //修改元素的内容
+                message.innerHTML = '您输入的正确';
+            }
+        }
+    </script>
+</body>
+
+</html>

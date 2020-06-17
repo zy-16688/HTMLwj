@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 可以使用简写的方式调用方法 @事件名="方法名"-->
+        <input type="button" value="v-on指令" v-on:click="doIt">
+        <input type="button" value="v-on简写" @click="doIt">
+        <input type="button" value="双击事件" @dblclick="doIt">
+        <h2 @click="changefood">{{food}}</h2>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                food: "西兰花炒蛋"
+            },
+            //方法都写在methods中
+            methods: {
+                doIt: function () {
+                    alert("做it")
+                },
+                changefood: function () {
+                    this.food += "好好吃"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 150px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <button>显示</button>
+    <button>隐藏</button>
+    <button>切换</button>
+    <div></div>
+    <script>
+        $(function () {
+            //点击第一个按钮
+            $("button").eq(0).click(function () {
+                //让盒子显示出来  show()
+                $("div").show(function () {
+                    alert(1);
+                })
+            })
+            //点击第二个按钮
+            $("button").eq(1).click(function () {
+                //让盒子隐藏 hide()
+                $("div").hide();
+            })
+            //点击第三个按钮
+            $("button").eq(2).click(function () {
+                //让盒子在显示和隐藏来回切换  toggle()
+                $("div").toggle();
+            })
+        })
+    </script>
+</body>
+
+</html>

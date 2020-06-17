@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 正则表达式对象创建   var reg = /^正则表达式$/
+        //reg.test(str) 就是用来验证是否符合正则表达式
+        //开始标志^  结束标志位$
+        var reg = /^\w{4,6}$/
+        var str = "12131421412125r1";
+        if (reg.test(str)) {
+            alert(true);
+        } else {
+            alert(false);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

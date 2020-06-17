@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <ol>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li class="item">我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ol>
+    <ul>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+        <li>我是ol 的li</li>
+    </ul>
+    <div class="current">俺有current</div>
+    <div>俺木有current</div>
+    <script>
+        $(function () {
+            //1.获取兄弟元素 不包括本身 siblings(selector)
+            $("ol .item").siblings("li").css("color", "pink");
+
+            //2.获取index指定的元素
+            //方法一 选择器   :eq(index)
+            $("ul li:eq(1)").css("color", "pink");
+            //方法二 筛选方法  eq(index)
+            $("ul li").eq(3).css("color", "pink");
+
+            // // 3. 判断是否有某个类名
+            console.log($("div:first").hasClass("current"));
+            console.log($("div:last").hasClass("current"));
+        })
+    </script>
+</body>
+
+</html>

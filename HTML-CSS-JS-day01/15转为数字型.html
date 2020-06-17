@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 转换为数字型 parseInt 
+        var age = prompt('请输入你的年龄');
+        console.log(parseInt(age)); //将字符串型转换为数字型
+        console.log(parseInt('166px'));  //转换之后会去掉最后的px
+        console.log(parseInt('em166px')); //最终解析出来为NaN 非数字型
+        //parseFloat
+        console.log(parseFloat('3.14'));
+        console.log(parseFloat('166px')) //同样回去掉最后的px
+        console.log(parseFloat('em166px')); //最终解析出来为NaN 非数字型
+        //利用Number
+        console.log(Number('18'));
+        //利用-,*,/
+        console.log('100' - '4');
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

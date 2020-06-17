@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            /* text-align: center;   等价于tac*/
+            text-align: center;
+            /* text-indent: 2em;   等价于ti */
+            text-indent: 2em;
+            /* width: 200px;  等价于w200*/
+            width: 200px;
+            /* text-indent: 2em; 等价于ti2em */
+            text-indent: 2em;
+            /* line-height: 26px; 等价于lh26px */
+            line-height: 26px;
+            /* text-decoration: none;  等价于tdn */
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 标签*指定数值 可以生成指定数值的指定标签 -->
+    <!-- div*10 可以指生成10个div标签 -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- p*4 直接生成4个p标签-->
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+
+    <!-- 父标签>子标签 可以生成包含关系的标签 -->
+    <!-- ul>li 生成了ul和li包含关系的标签 -->
+    <ul>
+        <li></li>
+    </ul>
+    <!--div>span 生成了div和span包含关系的标签 -->
+    <div><span></span></div>
+
+
+
+    <!-- 兄弟标签+兄弟标签 生成兄弟关系的标签 -->
+    <!--div+p 生成了div和p的兄弟关系标签 -->
+    <div></div>
+    <p></p>
+
+    <!-- 标签.或者#类名可以快速生成一个带类名或者id的标签 -->
+    <!-- span#hehe  -->
+    <span id="hehe"></span>
+    <!-- span.haha -->
+    <span class="haha"></span>
+
+    <!-- div.类名$*数值 标签.或者#类名$*数值 生成带有类名并且从1开始排序的标签-->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+    <div class="demo6"></div>
+
+    <!-- div{默认内容}  标签{默认内容} 生成单个带内容的标签 -->
+    <div>这是可以生成单个个带内容的标签</div>
+    <!-- div{默认内容}*数值 标签{默认内容}*数值 可以生成多个带内容的标签 -->
+    <div>这个可以生成多个带内容的标签</div>
+    <div>这个可以生成多个带内容的标签</div>
+    <div>这个可以生成多个带内容的标签</div>
+    <div>这个可以生成多个带内容的标签</div>
+    <div>这个可以生成多个带内容的标签</div>
+    <div>这个可以生成多个带内容的标签</div>
+
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+</body>
+
+</html>

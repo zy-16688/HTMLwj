@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1">盒子</div>
+    <script>
+        var box1 = document.querySelector('.box1');
+        //通过类名的叠加来进行样式修改 element.className='样式类名';
+        box1.onclick = function () {
+            //可以实现多类名
+            box1.className = 'box1 box2';
+        }
+    </script>
+</body>
+
+</html>

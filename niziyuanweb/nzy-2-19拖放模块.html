@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>无标题文档</title>
+	<style>
+		p {
+			width: 100px;
+			height: 100px;
+			background-color: #66CCFF;
+
+		}
+
+		div#container {
+			border: 1px solid;
+			width: 200px;
+			height: 200px;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>移动应用</h3>
+	<hr />
+	<p id="text" draggable="true" ondragstart="drag(event)">
+		移动模块</p>
+	<div id="container" ondragover="allowDrop(event)" ondrop="drop(event)">
+		这里是区域</div>
+	<script>
+		function drag(ev) {
+			ev.dataTransfer.setData("text/plain", ev.target.id);
+
+		}
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+		function drop(ev) {
+			ev.preventDefault();
+			var id = ev.dataTransfer.getData("text");
+			var p = document.getElementById(id);
+			ev.target.appendChild(p);
+
+		}
+	</script>
+</body>
+
+</html>

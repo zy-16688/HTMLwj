@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <a href="javascript:;" class="decrement">-</a>
+    <input type="text" value="1" class="count">
+    <a href="javascript:;" class="increment">+</a>
+    <script>
+        $(function () {
+            $(".increment").click(function () {
+                var n = $(this).siblings(".count").val();
+                n++;
+                $(this).siblings(".count").val(n);
+            })
+            //点击-按钮之后
+            $(".decrement").click(function () {
+                //先获取文本框中的值
+                var n = $(this).siblings(".count").val();
+                //若文本框中的值为0时就不在继续执行下面的代码
+                if (n == 0) {
+                    return false;
+                }
+                //数量减少
+                n--;
+                //将-号的兄弟元素count的值赋为n
+                $(this).siblings(".count").val(n);
+            })
+        })
+    </script>
+</body>
+
+</html>

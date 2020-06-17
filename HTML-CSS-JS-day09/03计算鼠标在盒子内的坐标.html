@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <script>
+        var box = document.querySelector('.box');
+        box.addEventListener('mousemove', function (e) {
+            //e.pageX 是获取鼠标在页面的位置
+            //this.offsetLeft 是获取盒子在页面的位置
+            //两者想减就是鼠标在盒子内的位置
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            box.innerHTML = 'x为' + x + 'y为' + y;
+        })
+    </script>
+</body>
+
+</html>

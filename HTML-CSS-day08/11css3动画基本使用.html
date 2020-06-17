@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 先定义动画 @keyframes 动画名称{
+            0%{样式}  开始
+            100%{样式} 结束
+         }
+         等价于
+         @keyframe 动画名称 {
+             from{样式} 开始
+             to {样式}  结束
+         }
+          */
+
+
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        /* 调用动画 
+        animation-name: 调用的动画名称
+        animation-duration: 持续的时间
+        */
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            animation-name: move;
+            animation-duration: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //变量预解析 把所有的变量的声明提升到了当前作用域最前面(不提升赋值操作)
+        console.log(num);  //输出结果为undefined
+        var num = 10;
+        //以上代码相当于
+        var num;
+        console.log(num);
+        num = 10;
+
+        fun();
+        var fun = function () {  //会报错   变量声明了但是函数没有赋值 
+            console.log(22);
+        }
+        //以上代码相当于
+        var fun;
+        fun();
+        fun = function () {
+            console.log(22);
+        }
+
+        //函数的声明就是将所有的函数的声明提升到当前作用域的最前面(不调用函数)
+        fn();
+        function fn() {
+            console.log(11);
+        }
+        //以上代码相当于
+        function fn() {
+            console.log(11);
+        }
+        fn();
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

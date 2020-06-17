@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>手风琴案例</title>
+
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            display: block;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .king {
+            width: 852px;
+            margin: 100px auto;
+            background: url(images/bg.png) no-repeat;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .king ul {
+            overflow: hidden;
+        }
+
+        .king li {
+            position: relative;
+            float: left;
+            width: 69px;
+            height: 69px;
+            margin-right: 10px;
+        }
+
+        .king li.current {
+            width: 224px;
+        }
+
+        .king li.current .big {
+            display: block;
+        }
+
+        .king li.current .small {
+            display: none;
+        }
+
+        .big {
+            width: 224px;
+            display: none;
+        }
+
+        .small {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 69px;
+            height: 69px;
+            border-radius: 5px;
+        }
+    </style>
+    <script src="jquery.min.js"></script>
+    <script>
+        $(function () {
+            //给king中的每个li添加鼠标经过事件
+            $(".king li").mouseenter(function () {
+                //鼠标经过当前的li 则将其的宽度修改为224 并且找到当前li的后代small让其淡出 big让其淡入
+                $(this).stop().animate({
+                    width: 224
+                }).find(".small").stop().fadeOut().siblings(".big").stop().fadeIn()
+                //其他的li 则将其宽度修改为64 并且当前li的后代small淡入 big淡出
+                $(this).siblings("li").stop().animate({
+                    width: 64
+                }).find(".small").stop().fadeIn().sibling(".big").stop().fadeOut()
+            })
+        })
+    </script>
+</head>
+
+<body>
+
+
+    <div class="king">
+        <ul>
+            <li class="current">
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/2.png" alt="" class="small">
+                    <img src="images/2.png" alt="" class="big">
+                </a>
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

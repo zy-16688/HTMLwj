@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.w {
+    width: 1200px;
+    margin: 60px auto;
+    /* background-color: pink; */
+}
+input {
+    margin: 10px;
+}
+
+.reghead {
+    width: 800px;
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.sb {
+    width: 200px;
+    height: 60px;
+    margin-left: 40px;
+    
+    cursor: pointer;
+}
+.sb:hover {
+    background-color: pink;
+}
+button {
+    background-color: white;
+    border: 1px solid #ccc;
+}
+.phonereg {
+    float: left;
+    width: 120px;
+    height: 40px;  
+    margin-right: 10px;
+    /* background: purple;   */
+    cursor: pointer; 
+}
+.phonereg:hover {
+    background-color: skyblue;
+    border-bottom: none;
+}
+
+.emailreg {
+    float: left;
+    width: 120px;
+    height: 40px;  
+    /* background: orange;  */
+    cursor: pointer; 
+}
+.emailreg:hover {
+    background-color: skyblue;
+    border-bottom: none;
+}
+.phoneregbody{
+    position: relative;
+    width: 650px;
+    margin: 20px;
+    padding-left: 150px;
+    line-height: 60px;
+    border-right: 1px solid #ccc;
+    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+.teltip {
+    display: none;
+    padding-left: 20px;
+    background: url(../img/message.png) no-repeat left center;
+   
+}
+.message {
+    display: none;
+    padding-left: 20px;
+    background: url(../img/message.png) no-repeat left center;
+    font-size: 14px;
+}
+.pdtip {
+    display: none;
+    padding-left: 20px;
+    background: url(../img/message.png) no-repeat left center;
+}
+.emailregbody {
+    position: relative;
+    width: 650px;
+    display: none;
+    margin: 20px;
+    padding-left: 150px;
+    line-height: 60px;
+    border-right: 1px solid #ccc;
+    box-shadow: 1px 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.protocol {
+    margin-left: 40px; 
+}
+
+#phone {
+    position:absolute;
+    top: 20px;
+    left: 60px;
+}
+
+.wrong {
+    color: red;
+    padding-left: 20px;
+    background: url(../img/wrong.png) no-repeat left center;
+}
+
+.right {
+    padding-left: 20px;
+    background: url(../img/right.png) no-repeat left center;
+}
+

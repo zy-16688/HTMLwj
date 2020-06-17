@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>简易灯箱画廊</title>
+    <style type="text/css">
+        #up {
+            width: 1000px;
+            height: 500px;
+
+        }
+
+        #down {
+            width: 1000px;
+            height: 150px;
+            border: 1px solid;
+            margin-top: 10px;
+        }
+
+        #down img {
+            width: 150px;
+            height: 150px;
+            padding-right: 12px;
+        }
+
+        #up img {
+            width: 1000px;
+            height: 440px;
+        }
+
+        p {
+            text-align: center;
+            font-size: 20px;
+        }
+
+        span {
+            display: none;
+        }
+
+        :target {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <audio src="../music/Jupiter%20Kv%20551%20Iallegro_Wolfgang%20Amadeus.mp3" autoplay="autoplay">
+        当前浏览器不支持audio
+    </audio>
+    <div id="up">
+        <span id="tu1">
+            <img src="img/1.jpg">
+            <p>窗</p>
+        </span>
+        <span id="tu2">
+            <img src="img/2.jpg">
+            <p>星</p>
+        </span>
+        <span id="tu3">
+            <img src="img/3.jpg">
+            <p>空</p>
+        </span>
+        <span id="tu4">
+            <img src="img/4.jpg">
+            <p>阳</p>
+        </span>
+        <span id="tu5">
+            <img src="img/5.jpg">
+            <p>月</p>
+        </span>
+        <span id="tu6">
+            <img src="img/6.jpg">
+            <p>塔</p>
+        </span>
+    </div>
+
+    <div id="down">
+        <a href=""><img src="img/1.jpg"></img></a>
+        <a href="#tu2">
+            <img src="img/2.jpg"></a>
+        <a href="#tu3">
+            <img src="img/3.jpg"></a>
+        <a href="#tu4">
+            <img src="img/4.jpg"></img></a>
+        <a href="#tu5">
+            <img src="img/5.jpg"></a>
+        <a href="#tu6">
+            <img src="img/6.jpg"></img></a>
+    </div>
+
+
+
+
+</body>
+
+</html>

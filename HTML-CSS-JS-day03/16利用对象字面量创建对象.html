@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //利用对象字面量创建对象{}
+        //var obj = {} //创建一个空的对象
+        var obj = {
+            uname: '张三丰',
+            age: 18,
+            sex: '男',
+            saHi: function () {
+                console.log('hi~');
+            }
+        }
+        //属性或者方法采取键值对的方式存储  属性名: 值;
+        //方法采取的是匿名方法
+
+        //对象的使用
+        //对象名.属性
+        console.log(obj.uname);
+        //对象名['属性']
+        console.log(obj['age']);
+        //对象名.方法()
+        console.log(obj.saHi());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

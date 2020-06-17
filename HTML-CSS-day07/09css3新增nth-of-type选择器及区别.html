@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* nth-child 先看的是后面 再看前面是否匹配类型 */
+        section div:nth-child(1) {
+            background-color: pink;
+        }
+
+        /* nth-of-type 先看的是前面是否匹配类型 在从匹配的类型中选取元素 */
+        section div:nth-of-type(1) {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <p>光头强</p>
+        <div>熊大</div>
+        <div>熊二</div>
+    </section>
+</body>
+
+</html>

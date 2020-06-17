@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 188px;
+            height: 38px;
+            margin: 0 auto;
+            border: 1px solid red;
+            line-height: 38px;
+        }
+
+        .miaosha {
+            /* 子绝父相 */
+            position: relative;
+            /* 添加浮动可以令文字围绕着盒子 */
+            float: left;
+            width: 100px;
+            height: 38px;
+            margin-right: 10px;
+            color: white;
+            text-align: center;
+            font-weight: 700;
+            background-color: red;
+        }
+
+        .miaosha i {
+            position: absolute;
+            /* 定义一个三角形 */
+            right: 0;
+            height: 0;
+            width: 0;
+            /* 先将除了右边框的颜色全部设为透明 */
+            border-color: transparent white transparent transparent;
+            /* 再将样式定位实线 */
+            border-style: solid;
+            /* 再将上边框设置大点 右边框设置小点 */
+            border-width: 38px 20px 0px 0px;
+        }
+
+        .beimiaosha {
+            /* 添加删除线 */
+            text-decoration: line-through;
+            color: gray;
+            font-size: 12px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <span class="miaosha">
+            <!-- i标签一般来设置三角形 -->
+            <i></i>
+            $1650</span>
+        <span class="beimiaosha">$5650</span>
+    </div>
+</body>
+
+</html>

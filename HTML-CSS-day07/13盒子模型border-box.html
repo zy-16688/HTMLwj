@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            /* 默认值为box-sizing:content-box
+              */
+            box-sizing: content-box;
+            /* border和padding会将盒子撑开 */
+            border: 10px solid red;
+            padding: 10px;
+            background-color: pink;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            /* box-sizing: border-box
+             添加此句后padding和border 不会撑开盒子
+            */
+            box-sizing: border-box;
+            padding: 10px;
+            border: 10px solid red;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2">hahaha</div>
+</body>
+
+</html>

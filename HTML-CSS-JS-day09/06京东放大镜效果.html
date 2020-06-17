@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 300px;
+            height: 600px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box1 {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 200px;
+            background-color: yellow;
+            opacity: .5;
+        }
+
+        .box2 {
+            display: none;
+            position: absolute;
+            left: 300px;
+            top: 0;
+            margin-left: 20px;
+        }
+
+        .box2 img {
+            width: 600px;
+            height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="img/taobao.png" alt="">
+        <div class="box1"></div>
+        <div class="box2"><img src="img/taobao.png" alt=""></div>
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var box1 = document.querySelector('.box1');
+        var box2 = document.querySelector('.box2');
+        //1.鼠标经过盒子 其他两个盒子出现 或者隐藏
+        box.addEventListener('mouseover', function () {
+            box1.style.display = 'block';
+            box2.style.display = 'block';
+        })
+        box.addEventListener('mouseout', function () {
+            box1.style.display = 'none';
+            box2.style.display = 'none';
+        })
+        //2.鼠标移动时,让黄色的盒子跟着鼠标移动
+        box.addEventListener('mousemove', function (e) {
+            //鼠标在页面的位置 减去 盒子在页面的位置 
+            var x = e.pageX - this.offsetLeft;
+            var y = e.pageY - this.offsetTop;
+            var box1X = x - box1.offsetWidth / 2;
+            var box1Y = y - box1.offsetHeight / 2;
+            if (box1X <= 0) {
+                box1X = 0;
+            } else if (box1X >= box.offsetWidth - box1.offsetWidth) {
+                box1X = box.offsetWidth - box1.offsetWidth;
+            }
+            if (box1Y <= 0) {
+                box1Y = 0;
+            } else if (box1Y >= box.offsetHeight - box1.offsetHeight) {
+                box1Y = box.offsetHeight - box1.offsetHeight;
+            }
+            box1.style.left = box1X + 'px';
+            box1.style.top = box1Y + 'px';
+        })
+    </script>
+</body>
+
+</html>

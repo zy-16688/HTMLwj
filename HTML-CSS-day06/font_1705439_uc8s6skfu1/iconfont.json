@@ -1,0 +1,23 @@
+{
+  "id": "1705439",
+  "name": "zhi'ti'tuu'biao",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1647439",
+      "name": "苹果",
+      "font_class": "pingguo",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "8363775",
+      "name": "安卓",
+      "font_class": "anzhuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    }
+  ]
+}

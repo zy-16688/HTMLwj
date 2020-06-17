@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            background-color: pink;
+            width: 1530px;
+            height: 220px;
+            margin: 0 auto;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box li {
+            background-color: purple;
+            float: left;
+            width: 400px;
+            height: 220px;
+            margin-right: 19px;
+        }
+
+        .box .box1 {
+            width: 270px;
+        }
+
+        /* 权重问题: 继承/* 元素选择器 类选择器/伪类选择器 
+            id选择器 行内样式style !important
+            权重高才能覆盖权重低的元素
+        */
+        .box .box2 {
+            margin-right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="box">
+        <li class="box1"></li>
+        <li></li>
+        <li></li>
+        <li class="box2"></li>
+    </ul>
+</body>
+
+</html>

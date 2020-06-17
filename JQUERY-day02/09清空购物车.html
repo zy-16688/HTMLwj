@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .box {
+            width: 1000px;
+            height: 100px;
+            background-color: pink;
+        }
+
+
+
+        .bg {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="h1">
+        <input type="checkbox" name="" id="" class="j-checkbox">
+        <div class="box" style="display:inline-block"></div>
+    </div>
+    <div class="h1">
+        <input type="checkbox" name="" id="" class="j-checkbox">
+        <div class="box" style="display:inline-block"></div>
+    </div>
+    <input type="checkbox" name="" id="" class="all_choose">
+    <a href="javascript:;" class="choose">删除选中的商品</a>
+    <a href="javascript:;" class="all">清空购物车</a>
+
+    <script>
+        $(function () {
+            $(".choose").click(function () {
+                $(".j-checkbox:checked").parents(".h1").remove();
+            })
+            $(".all").click(function () {
+                $(".j-checkbox").parents(".h1").remove();
+            })
+            $(".all_choose").change(function () {
+                //若全选按钮被选中 则添加一个bg类
+                if ($(this).prop("checked")) {
+                    $(this).siblings(".h1").addClass("bg");
+                } else {
+                    $(this).siblings(".h1").removeClass("bg");
+                }
+            })
+
+
+        })
+    </script>
+</body>
+
+</html>

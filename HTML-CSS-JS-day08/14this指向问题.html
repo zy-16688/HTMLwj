@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //this一般指向那个调用它的对象
+        //1.全局作用域或者普通函数中this指向全局对象window
+        //定时器中的this指向window
+        console.log(this);  //输出window
+        setTimeout(function () {
+            console.log(this);  //输出window
+        }, 1000)
+        //2.方法中谁调用了方法this就指向了谁
+        var o = {
+            sayHi: function () {
+                console.log(this);  //this指向了对象o        
+            }
+        }
+        o.sayHi();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>发布</button>
+    <ul></ul>
+    <script>
+        ul = document.querySelector('ul');
+        btn = document.querySelector('button');
+        text = document.querySelector('textarea');
+        //按钮一点击
+        btn.onclick = function () {
+            //创建新的li节点
+            li = document.createElement('li');
+            //若文本域中的内容为空
+            if (text.value == '') {
+                alert('请输入内容:');  //弹出警示窗
+            } else {  //若文本域中不为空
+                //li的内容修改为文本域中的内容
+                li.innerHTML = text.value;
+                //只是追加到后面  将新的节点插入到ul中
+                //ul.appendChild(li);
+                //将新发布的评论添加到最前
+                ul.insertBefore(li, ul.children[0]);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        #aa {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" id="bb" value="niziyuan" readonly="readonly" v-model="name">
+        <input type="text" id="aa" v-model="name">
+        <a href="javascript:;" id="alertBtn">修改</a>
+    </div>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                name: "niziyuan",
+            }
+        })
+        var btn = document.querySelector("#alertBtn");
+        var aa = document.querySelector("#aa");
+        var bb = document.querySelector("#bb");
+        btn.onclick = function () {
+            aa.disabled = "";
+            aa.style.display = "block";
+            bb.style.display = "none";
+        }
+        aa.onblur = function () {
+            aa.disabled = "disabled"
+        }
+
+    </script>
+</body>
+
+</html>

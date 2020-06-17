@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .left,
+        .right {
+            width: 222px;
+            height: 222px;
+            background-color: pink;
+            /*   多个块级元素纵向排列找标准流,
+                多个块级块级元素横向排列找浮动
+            浮动 float
+            选择器{float: 属性值}
+            属性值包括:none left right
+            */
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="right"></div>
+</body>
+
+</html>

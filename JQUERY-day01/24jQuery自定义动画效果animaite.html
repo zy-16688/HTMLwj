@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button>动起来</button>
+    <div></div>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                //自定义动画  animate(params)  params以对象的形式进行传递
+                $("div").animate({
+                    //top值修改为500  left值修改为200
+                    top: 500,
+                    left: 200
+                }, 1000)
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>2188</div>
+    <p>
+        123
+    </p>
+    <script>
+        var div = document.querySelector('div');
+        //innerText不识别html标签  并且去掉空格和换行
+        div.innerText = '<strong>2188</strong>';
+        //innerHTML 识别html标签  保留空格和换行
+        div.innerHTML = '<strong>2188</strong>';
+        var p = document.querySelector('p');
+        //获取p中的文本内容 但是会去掉空格和换行   
+        console.log(p.innerText);
+
+    </script>
+</body>
+
+</html>

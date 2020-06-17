@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <script>
+        $(function () {
+            //each循环格式  each(function(index,domEle){})
+            //当我们要对不同的元素进行不同的操作时 就要使用到each循环
+            var arr = ["pink", "blue", "red"];
+            var sum = 0;
+            $("div").each(function (index, domEle) {
+                //第一个参数获取的是下标值
+                console.log(index);
+                //第二个参数 获取的是对应下标的DOM元素
+                console.log(domEle);
+                //要是用jquery的方法要将DOM元素转换为jQuery对象
+                //$(domEle).css("color", "red");
+                $(domEle).css("color", arr[index]);
+                //将每个div中的文本内容相加
+                sum += parseInt($(domEle).text());
+
+            })
+            console.log(sum);
+            //遍历数组
+            //$.each(对象,function(index,domEle){}) 主要用于遍历数据
+            $.each(arr, function (index, domEle) {
+                console.log(index);   //输出数组中的下标
+                console.log(domEle);  //输出数组中的值
+            })
+            //遍历对象
+            $.each({
+                name: "andy",
+                age: 18
+            }, function (index, domEle) {
+                console.log(index);  //输出的是属性名name
+                console.log(domEle);    //输出的是属性值 andy
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ol>
+    <script>
+        var ol = document.querySelector('ol');
+        //方法一:firstElementChild 返回第一个子元素节点 
+        console.log(ol.firstElementChild);
+        console.log(ol.lastElementChild);
+        //方法二:   
+        console.log(ol.children[0]);
+        console.log(ol.children[ol.childen.length - 1]);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <button>快速</button>
+    <script>
+        $(function () {
+            //给每个button添加点击事件  有隐式迭代
+            $("button").click(function () {
+                //点击之后当前的按钮 改变背景颜色
+                $(this).css("background", "pink");
+                //排他思想  利用siblings兄弟选择方法  将除了本身以外元素的背景颜色置空
+                $(this).siblings().css("background", "");
+            })
+        })
+    </script>
+</body>
+
+</html>

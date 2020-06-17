@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        复合选择器的权重会进行叠加
+        */
+        div ul li {
+            color: pink;
+        }
+
+        .nav ul li {
+            color: red;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>哈哈</li>
+            <li>哈哈</li>
+            <li>哈哈</li>
+        </ul>
+    </div>
+</body>
+
+</html>

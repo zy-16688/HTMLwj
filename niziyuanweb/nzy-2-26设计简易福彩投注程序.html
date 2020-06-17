@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 600px;
+            height: 300px;
+            border: 1px solid red;
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        #clear {
+            position: absolute;
+            top: 90px;
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+    <script>
+        window.addEventListener("click", function () {
+            var tou1 = document.querySelector("#tou1");
+            var tou2 = document.querySelector("#tou2");
+            var tou3 = document.querySelector("#tou3");
+            var clear = document.querySelector("#clear");
+            var num1 = document.querySelector("#number1");
+            tou1.onclick = function () {
+                var str = "";
+                for (var i = 1; i < 9; i++) {
+                    num = getRandom(1, 30);
+                    str = str + num + " ";
+                }
+                num1.value = str;
+            }
+
+            var num2 = document.querySelector("#number2");
+            tou2.onclick = function () {
+                var str = "";
+                for (var i = 1; i < 9; i++) {
+                    num = getRandom(1, 30);
+                    str = str + num + " ";
+                }
+                num2.value = str;
+            }
+            var num3 = document.querySelector("#number3");
+            tou3.onclick = function () {
+                var str = "";
+                for (var i = 1; i < 9; i++) {
+                    num = getRandom(1, 30);
+                    str = str + num + " ";
+                }
+                num3.value = str;
+            }
+            function getRandom(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            clear.onclick = function () {
+                num1.value = "";
+                num2.value = "";
+                num3.value = "";
+            }
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h3 class="title">简易福彩投注程序</h3>
+        <h3 style="display: inline-block;">彩票号码</h3><input type="text" id="number1"><button id="tou1">投注</button><button
+            id="clear">清空</button><br>
+        <h3 style="display: inline-block;">彩票号码</h3><input type="text" id="number2"><button id="tou2">投注</button>
+        <br>
+        <h3 style="display: inline-block;">彩票号码</h3><input type="text" id="number3"><button id="tou3">投注</button>
+
+    </div>
+</body>
+
+</html>

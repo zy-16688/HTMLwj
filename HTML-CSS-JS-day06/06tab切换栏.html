@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .tab {
+            width: 600px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .tab_list {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .tab_list li {
+            float: left;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        .tab_list .current {
+            background-color: red;
+        }
+
+        .tab_con .item {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品1</li>
+                <li>商品2</li>
+                <li>商品3</li>
+                <li>商品4</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block">商品1</div>
+            <div class="item">商品2</div>
+            <div class="item">商品3</div>
+            <div class="item">商铺3</div>
+        </div>
+        <script>
+            //获取事件源
+            var lis = document.querySelector('.tab_list').querySelectorAll('li');
+            var item = document.querySelector('.tab_con').querySelectorAll('.item');
+            //循环遍历给每个li注册事件
+            for (var i = 0; i < lis.length; i++) {
+                //给每个li添加自定义属性  便于后面获取点击的是哪个li
+                lis[i].setAttribute('index', i);
+                //给li注册事件
+                lis[i].onclick = function () {
+                    //点击后先清除各个li的样式
+                    for (var i = 0; i < lis.length; i++) {
+                        lis[i].className = '';
+                    }
+                    //在单独给当前的li添加样式
+                    this.className = 'current';
+                    //获取当前点击了哪个li
+                    var index = this.getAttribute('index');
+                    //将所有的item的样式都清空
+                    for (var i = 0; i < item.length; i++) {
+                        item[i].style.display = 'none';
+                    }
+                    //将拿到的对应的li的下标的item的样式修改
+                    item[index].style.display = 'block';
+                    prompt();
+                }
+
+            }
+        </script>
+    </div>
+</body>
+
+</html>

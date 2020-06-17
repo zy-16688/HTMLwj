@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        .container {
+            height: 6000px;
+            width: 500px;
+            background-color: pink;
+            margin: 200px auto;
+        }
+
+        .back {
+            display: none;
+            position: fixed;
+            right: 0;
+            top: 200px;
+            height: 100px;
+            width: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">返回顶部</div>
+    <div class="container"></div>
+    <script>
+        $(function () {
+            //页面被卷去的头部 scrollTop()  被卷去的左侧 scrollLeft()
+            var top = $(".container").offset().top;  //获取盒子距离页面顶部的距离
+            $(window).on("scroll", function () {
+                //如果页面卷去头部的距离>=盒子距离页面顶部的距离
+                if ($(document).scrollTop() >= top) {
+                    $(".back").fadeIn();
+
+                } else {
+                    $(".back").fadeOut();
+                }
+            })
+        })
+        //返回顶部  必须是给元素添加动画
+        $(".back").on("click", function () {
+            $("body,html").animate({
+                scrollTop: 0   //页面被卷去头部的距离修改为0
+            });
+        })
+    </script>
+</body>
+
+</html>

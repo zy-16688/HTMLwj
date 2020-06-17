@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition: all 0.5s;
+            /* transform: translate(x,y) 不会影响其他盒子可以用于过渡效果
+            移动x和y轴的距离
+            */
+            /* transform: translate(100px, 100px); */
+            /* 单独移动x轴 */
+            /* transform: translateX(100px); */
+            /* 单独移动y轴 */
+            /* transform: translate(100px); */
+        }
+
+        div:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

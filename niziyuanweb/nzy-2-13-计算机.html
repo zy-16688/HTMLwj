@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cal1() {
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            var sum = 0;
+            num1 = parseInt(num1);
+            num2 = parseInt(num2);
+            var syp = document.getElementById("syp").value;
+            switch (syp) {
+                case '+':
+                    sum = num1 + num2;
+                    break;
+                case '-':
+                    sum = num1 - num2;
+                    break;
+                case '/':
+                    sum = num1 / num2;
+                    break;
+                case '*':
+                    sum = num1 * num2;
+                    break;
+            }
+            document.write("<h1>sum</h1>");
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="num1">
+    <input type="text" id="syp">
+    <input type="text" id="num2">
+    <input type="button" value="提交" onclick="cal1();">
+</body>
+
+</html>

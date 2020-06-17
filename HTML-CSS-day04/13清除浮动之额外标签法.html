@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .damao {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        .ermao {
+            height: 450px;
+            background-color: pink;
+        }
+
+        .damao1 {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            float: left;
+
+        }
+
+        .damao2 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            float: left;
+
+        }
+
+        /*
+            消除浮动:
+            选择器 {
+                clear: both;
+            }
+            额外标签法: 
+            在父元素中的最后一个浮动元素添加一个空标签(必须是块级标签)
+            并且为其指定 clear: both
+        */
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="damao">
+        <div class="damao1"></div>
+        <div class="damao2"></div>
+        <div class="damao2"></div>
+        <div class="damao2"></div>
+        <!-- 可以利用调用类来实现
+            也可以通过实现 <div style="clear: both"></div>
+        -->
+        <div class="clear"></div>
+    </div>
+    <div class="ermao"></div>
+</body>
+
+</html>

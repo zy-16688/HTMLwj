@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .w {
+            /* 浮动不会压住标准流的文字和图片(可以用来做文字环绕效果)
+            float: left;
+            */
+            /* 浮动会压住标准流的文字和图片 */
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w"></div>
+    <p>顺顺利利</p>
+</body>
+
+</html>

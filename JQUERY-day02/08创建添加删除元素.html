@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>哈哈啊</li>
+    </ul>
+    <script>
+        var li = $("<li>哈哈哈哈哈</li>");
+        //1.内部添加
+        $("ul").append(li);  //添加到内容的最后面
+        $("ul").prepend(li);  //添加到内容的最前面
+        //2.外部添加
+        var div = $("<div>渣渣</div>");
+        $("ul").after(div);  //ul的后面添加
+        $("ul").before(div);
+        //3.删除元素
+        $("ul").remove();  //删除自身
+        $("ul").empty();  //置空ul;
+    </script>
+</body>
+
+</html>

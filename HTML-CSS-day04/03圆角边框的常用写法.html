@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 666px;
+            height: 300px;
+            background-color: pink;
+            /* 若是矩形区域时需要圆角矩形则将设置为
+            border-radius: 高度的一半;
+             */
+            border-radius: 150px;
+        }
+
+        .two {
+            width: 666px;
+            height: 666px;
+            background-color: pink;
+            /* 指定了四个角的弯度 */
+            border-radius: 20px 30px 40px 50px;
+            /* 指定对角的弯度 */
+            border-radius: 20px 30px;
+            /* 指定了左上角的弯度 */
+            border-top-left-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="one"></div>
+    <div class="two"></div>
+</body>
+
+</html>

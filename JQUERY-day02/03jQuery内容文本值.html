@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <span>内容</span>
+    </div>
+    <input type="text" value="请输入信息">
+    <script>
+        //1.获取和设置元素的内容 html() 
+        console.log($("div").html());  //获取带标签的元素
+        $("div").html("123");  //设置元素的内容
+        //2.获取和设置元素的文本内容 text()
+        console.log($("div").text());
+        $("div").text("456");  //设置元素的文本内容
+        //3.获取设置表单的值
+        console.log($("input").val());  //获取表单的值
+        $("input").val("输入值");  //设置表单的值
+    </script>
+</body>
+
+</html>

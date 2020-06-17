@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            position: relative;
+            width: 448px;
+            height: 252px;
+        }
+
+        /* 使用伪元素选择器  */
+        .box::before {
+            /* 因为要覆盖住底下的图片所以要用到定位 */
+            position: absolute;
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 伪元素选择器中content必须写 */
+            content: "";
+            /* 设置背景图片和背景色 */
+            background: url("imgs/箭头.png") no-repeat rgba(0, 0, 0, 0.7) center;
+        }
+
+        .box:hover::before {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <img src="imgs/tudou.jpg" alt="">
+    </div>
+</body>
+
+</html>

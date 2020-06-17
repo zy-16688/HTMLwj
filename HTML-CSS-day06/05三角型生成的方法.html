@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .boxsun {
+            height: 0;
+            width: 0;
+            border-top: 10px solid pink;
+            border-left: 10px solid purple;
+            border-right: 10px solid orange;
+            border-bottom: 10px solid green;
+        } */
+
+        .box {
+            /* 生成三角形的方法
+            1.指定一个盒子的宽高为0
+            2.并且为其添加边框先定为全部都为透明色
+            3.在指定你所要的三角形的位置的边框 border-left-color: color;
+            */
+            height: 0;
+            width: 0;
+            border: 10px solid transparent;
+            border-top-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxsun"></div>
+    <div class="box"></div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        $(function () {
+            $("div").on("click", function () {
+                alert(11);
+            })
+            //1.自动触发 element.click()
+            $("div").click();
+            //2.element.trigger(type)
+            $("div").trigger("click");
+            //3.element.triggerHandler(type) 不会触发事件默认行为
+            $("div").triggerHandler("click");
+        })
+    </script>
+</body>
+
+</html>

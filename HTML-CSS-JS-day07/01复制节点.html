@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+    <script>
+        var ul = document.querySelector('ul');
+        //复制节点或者克隆节点 node.cloneNode()  默认参数为空 只复制标签
+        var lili = ul.children[0].cloneNode();  //只复制标签
+        var lili1 = ul.children[0].cloneNode(true); //若参数为true就会复制标签和内容
+        ul.appendChild(lili);
+        ul.append(lili1);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入包 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- 固定写法 {{message}} -->
+        {{message}}
+    </div>
+    <script>
+        // new Vue({对象})
+        var app = new Vue({
+            //获取元素
+            el: '#app',
+            //进行数据赋值
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+    </script>
+</body>
+
+</html>

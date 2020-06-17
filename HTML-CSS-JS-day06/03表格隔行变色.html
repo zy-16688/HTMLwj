@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 800px;
+            margin: 100px auto;
+            text-align: center;
+            /* 两个表格的边框合并 */
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        thead tr {
+            background-color: blue;
+        }
+
+        .bg {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>代码</th>
+                <th>名称</th>
+                <th>最新公布净值</th>
+                <th>累计净值</th>
+                <th>单位净值</th>
+                <th>净值增率</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+            <tr>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+                <td>003526</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        //for循环主要用来遍历多个行数  给每一行注册事件
+        for (var i = 0; i < trs.length; i++) {
+            //鼠标经过事件
+            trs[i].onmouseover = function () {
+                //将那一行的背景颜色改为粉色
+                this.className = 'bg';
+            }
+            //鼠标移开事件
+            trs[i].onmouseout = function () {
+                //将调用的类名置为空
+                this.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

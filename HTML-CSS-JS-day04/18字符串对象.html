@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //字符串截取 substr()
+        var str = '改革春风吹满地';
+        str = str.substr(2, 2);
+
+        //字符串替换 replace()
+        var str1 = 'abcofeofdeo';
+        while (str1.indexOf('o') !== -1) {
+            str1 = str1.replace('o', '*');
+        }
+        console.log(str1);
+        //字符串分割 spilt()
+        var str2 = 'red,color';
+        console.log(str2.split(','));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

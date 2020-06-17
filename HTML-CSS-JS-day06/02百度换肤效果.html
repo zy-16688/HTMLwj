@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: url(imges/1.jpg);
+        }
+
+        .baidu {
+            width: 400px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+
+        .baidu li {
+            float: left;
+            list-style: none;
+        }
+
+        li img {
+            width: 80px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="baidu">
+        <li><img src="imges/1.jpg" alt=""></li>
+        <li><img src="imges/2.jpg" alt=""></li>
+        <li><img src="imges/3.jpg" alt=""></li>
+        <li><img src="imges/4.jpg" alt=""></li>
+    </ul>
+    <script>
+        var imgs = document.querySelector('.baidu').querySelectorAll('img');
+        //给每张图片注册事件
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')';
+            }
+        }
+    </script>
+</body>
+
+</html>

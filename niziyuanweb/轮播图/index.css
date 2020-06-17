@@ -1,0 +1,177 @@
+/* top栏 */
+#top {
+    height: 60px;
+    background-color: skyblue;
+    font-size: 14px;
+    line-height: 50px;
+}
+#top a {
+    height: 40px;
+    margin-left: 20px;
+    display: inline-block;
+}
+#top a:hover {
+    border-bottom: 2px solid red;
+}
+#top #index {
+    margin-left: 450px;
+    text-align: center;
+}
+#top #log {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+}
+#top #reg {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    font-size: 12px;
+}
+#top #userinfo {
+    margin-left: 100px;
+}
+/* 轮播图 */
+#rotation {
+    width: 100%;
+    height: 330px;
+    background-color: pink;
+    text-align: center;
+}
+.cont{
+    margin:0 auto;
+    width:  400px;
+    height: 330px;
+}
+.cont li{
+    cursor: pointer;
+    position: absolute;
+    width:  400px;
+    height: 330px;
+}
+.cont img{
+    position: relative;
+    width:  400px;
+    height: 330px;
+}
+.item.active{
+    z-index: 50;
+}
+#left{
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    left: 280px;
+    z-index: 99;
+    color: #fff;
+
+}
+
+#right{
+    cursor: pointer;
+    position: absolute;
+    top: 150px;
+    right: 280px;
+    z-index: 99;
+}
+.dot{
+    position: absolute;
+    top: 350px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    z-index: 99;
+}
+.dot .point{
+    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    margin: 6px;
+    background-color: rgba(0,0,0,.8);
+    border-radius: 50%;
+}
+.point.active{
+    background-color: rgba(255,255,255,0.6);
+
+}
+/* 出版图书板块 */
+#publish #publish_title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+#publish #publish_body {
+    width: 100%;
+    height: 497px;
+    background-color: pink;
+}
+#publish #recommend_list {
+    float: left;
+    width: 838px;
+    height: 100%;
+    padding: 33px;
+    background-color: purple;
+}
+/* 推荐列表左侧 */
+#recommend_list #list_left {
+    float: left;
+    width: 410px;
+    height: 100%;
+    background-color: pink;
+}
+#list_left #left_title {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    background-color: skyblue;
+}
+#left_title h4 {
+    font-size: 18px;
+    font-weight: 400;
+}
+#left_title h6 {
+    font-size: 12px;
+    font-weight: 400;
+}
+#left_body img {
+    margin: 80px 150px;
+    width: 120px;
+
+}
+/* 推荐列表右侧 */
+#recommend_list #list_right {
+    float: left;
+    width: 358px;
+    height: 100%;
+    background-color: orange;
+}
+#list_right ul li {
+    float: left;
+    width: 178px;
+    height: 215px;
+    border: 1px solid #ccc;
+    background-color: pink;
+}
+#right_body img {
+    margin-top: 24px;
+    margin-left: 24px;
+    width: 100px;
+}
+#right_title {
+    margin-top: 10px;
+    margin-left: 24px;
+}
+/* 畅销版 */
+#ranking_list {
+    float: left;
+    width: 362px;
+    height: 100%;
+    padding: 33px;
+    background-color: orange; 
+}
+

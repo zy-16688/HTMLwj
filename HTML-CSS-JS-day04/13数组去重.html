@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var newArr = [];
+        function unique(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                //若新数组中没有传递过来数组中的元素
+                if (newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i])//则将数组中的元素压入新数组
+                }
+            }
+            return newArr;
+        }
+        var arr1 = unique(['a', 'b', 'd', 'a', 'd', 'b']);
+        console.log(arr1);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

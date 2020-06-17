@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Math对象中求最大值方法
+        Math.max(1, 2, 3, 4, 5, 6);
+        //等价于
+        var myMath = {
+            max: function () {
+                var max = arguments[0];
+                for (var i = 0; i < arguments.length; i++) {
+                    if (arguments[i] > max) {
+                        max = arguments[i];
+                    }
+                }
+                return max;
+            },
+            min: function () {
+                var min = arguments[0];
+                for (var i = 0; i < arguments.length; i++) {
+                    if (arguments[i] < min) {
+                        min = arguments[i];
+                    }
+                }
+            }
+        }
+        //绝对值方法
+        console.log(Math.abs(-1));
+
+        //三个取整方法
+        Math.floor(1.1); //向下取整得到1
+
+        Math.ceil(1.5); //向上取整得到2
+
+        Math.round(1.1) //四舍五入
+
+        //随机数产生
+        Math.radom(); //取0-1但不包括1
+        //产生两个数之间的随机整数包括头和尾
+        //Math.floor(Math.random()*(max-min+1))+min;
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

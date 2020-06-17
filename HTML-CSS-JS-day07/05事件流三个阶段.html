@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        .son {
+            width: 100px;
+            height: 50px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        //js代码中只能执行捕获或者冒泡阶段
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        //addEventListener(type,listener,true) 第三个参数为true 则 处于捕获阶段  document->html->body->father->son
+        father.addEventListener('click', function () {  //先执行father
+            alert('father');
+        }, true)
+        son.addEventListener('click', function () {  //在执行son
+            alert('son');
+        }, true)
+        //addEventListener(type,listener,false)  第三个参数为false则 处于冒泡阶段  son -> father ->body -> html -> document
+        father.addEventListener('click', function () {  //先执行son在执行father
+            alert('father');
+        }, false)
+        son.addEventListener('click', function () {
+            alert('son');
+        }, false)
+    </script>
+</body>
+
+</html>
